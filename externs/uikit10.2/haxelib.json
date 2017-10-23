@@ -1,0 +1,12 @@
+{
+   "name": "objc-uikit10.2"
+  ,"url": "https://github.com/Aurel300/hx-objc-externs"
+  ,"license": "MIT"
+  ,"tags": ["cross", "ios"]
+  ,"description": "UIKit externs for iPhoneOS10.2 SDK"
+  ,"version": "0.0.1"
+  ,"classPath": "."
+  ,"releasenote": ""
+  ,"contributors": ["Aurel300"]
+  ,"dependencies": {}
+}
