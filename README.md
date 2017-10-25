@@ -17,10 +17,25 @@ This is a [Haxe](http://www.haxe.org/) `extern` generator for Objective-C classe
 
 ## Generated externs ##
 
-Externs provided in this repository in `package`:
+Externs provided in this repository:
 
  - `externs/uikit10.2`
-   - `<UIKit/UIKit.h>`
+   - `-lib objc-uikit10.2`
+   - package: `com.apple.*`
    - includes some `NS*` types from Foundation, `CA` and `CG`
    - from the `iPhoneOS10.2` SDK
-   - full AST dump in `clang-ast/uikit10.2.txt`
+   - full AST dump of `<UIKit/UIKit.h>` in `clang-ast/uikit10.2.txt`
+
+## Usage ##
+
+This repository is intended to host the generator and several different extern libraries. To use an extern library:
+
+```
+cd "LOCATION"
+git clone https://github.com/Aurel300/hx-objc-externs.git
+haxelib dev objc-uikit10.2 "LOCATION/hx-objc-externs/externs/uikit10.2"
+```
+
+(Where LOCATION is a path of your choosing.)
+
+Then, in your project, add the externs with `-lib objc-uikit10.2`.
