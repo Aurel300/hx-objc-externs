@@ -10,6 +10,6 @@ import haxe.Int64;
 extern class CGFunctionCallbacks
 {
   public var evaluate:Dynamic;
-  public var version:Dynamic /*Int*/;
+  public var version:Int;
   public var releaseInfo:Dynamic;
 }

@@ -10,14 +10,14 @@ import haxe.Int64;
 extern class NSURLSessionStreamTask
 extends NSURLSessionTask
 {
-  @:native("startSecureConnection") public function startSecureConnection():Dynamic /*Void*/;
-  @:native("readDataOfMinLength:maxLength:timeout:completionHandler") public function readDataOfMinLength_maxLength_timeout_completionHandler(minBytes:Int, maxBytes:Int, timeout:Float, completionHandler:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("captureStreams") public function captureStreams():Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSURLSessionStreamTask;
-  @:native("writeData:timeout:completionHandler") public function writeData_timeout_completionHandler(data:NSData, timeout:Float, completionHandler:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("closeWrite") public function closeWrite():Dynamic /*Void*/;
   @:overload(function():NSURLSessionStreamTask {})
   @:native("autorelease") override public function autorelease():NSURLSessionTask;
-  @:native("closeRead") public function closeRead():Dynamic /*Void*/;
-  @:native("stopSecureConnection") public function stopSecureConnection():Dynamic /*Void*/;
+  @:native("captureStreams") public function captureStreams():Void;
+  @:native("closeRead") public function closeRead():Void;
+  @:native("closeWrite") public function closeWrite():Void;
+  @:native("readDataOfMinLength:maxLength:timeout:completionHandler") public function readDataOfMinLength_maxLength_timeout_completionHandler(minBytes:Int, maxBytes:Int, timeout:Float, completionHandler:Dynamic):Void;
+  @:native("startSecureConnection") public function startSecureConnection():Void;
+  @:native("stopSecureConnection") public function stopSecureConnection():Void;
+  @:native("writeData:timeout:completionHandler") public function writeData_timeout_completionHandler(data:NSData, timeout:Float, completionHandler:Dynamic):Void;
 }

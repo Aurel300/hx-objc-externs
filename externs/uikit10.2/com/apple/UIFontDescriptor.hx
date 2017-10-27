@@ -11,27 +11,29 @@ extern class UIFontDescriptor
 implements cpp.objc.Protocol<NSCopying>
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("objectForKey") public function objectForKey(anAttribute:NSString):Dynamic /*Dynamic*/;
-  @:native("pointSize") public function pointSize():Float;
-  @:native("symbolicTraits") public function symbolicTraits():UIFontDescriptorSymbolicTraits;
-  @:native("fontDescriptorWithName:size") public static function fontDescriptorWithName_size(fontName:NSString, size:Float):UIFontDescriptor;
+  @:native("alloc") public static function alloc():UIFontDescriptor;
+  @:native("autorelease") public function autorelease():UIFontDescriptor;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("fontAttributes") public function fontAttributes():Dynamic;
+  @:native("fontDescriptorByAddingAttributes") public function fontDescriptorByAddingAttributes(attributes:Dynamic):UIFontDescriptor;
+  @:native("fontDescriptorWithFace") public function fontDescriptorWithFace(newFace:NSString):UIFontDescriptor;
+  @:native("fontDescriptorWithFamily") public function fontDescriptorWithFamily(newFamily:NSString):UIFontDescriptor;
+  @:native("fontDescriptorWithFontAttributes") public static function fontDescriptorWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
+  @:native("fontDescriptorWithMatrix") public function fontDescriptorWithMatrix(matrix:CGAffineTransform):UIFontDescriptor;
   @:native("fontDescriptorWithName:matrix") public static function fontDescriptorWithName_matrix(fontName:NSString, matrix:CGAffineTransform):UIFontDescriptor;
-  @:native("fontDescriptorWithFontAttributes") public static function fontDescriptorWithFontAttributes(attributes:Dynamic /*Dynamic*/):UIFontDescriptor;
+  @:native("fontDescriptorWithName:size") public static function fontDescriptorWithName_size(fontName:NSString, size:Float):UIFontDescriptor;
+  @:native("fontDescriptorWithSize") public function fontDescriptorWithSize(newPointSize:Float):UIFontDescriptor;
+  @:native("fontDescriptorWithSymbolicTraits") public function fontDescriptorWithSymbolicTraits(symbolicTraits:UIFontDescriptorSymbolicTraits):UIFontDescriptor;
+  @:native("init") public function init():UIFontDescriptor;
+  @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIFontDescriptor;
+  @:native("initWithFontAttributes") public function initWithFontAttributes(attributes:Dynamic):UIFontDescriptor;
+  @:native("matchingFontDescriptorsWithMandatoryKeys") public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic):Dynamic;
+  @:native("matrix") public function matrix():CGAffineTransform;
+  @:native("objectForKey") public function objectForKey(anAttribute:NSString):Dynamic;
+  @:native("pointSize") public function pointSize():Float;
+  @:native("postscriptName") public function postscriptName():NSString;
   @:native("preferredFontDescriptorWithTextStyle") public static function preferredFontDescriptorWithTextStyle(style:NSString):UIFontDescriptor;
   @:native("preferredFontDescriptorWithTextStyle:compatibleWithTraitCollection") public static function preferredFontDescriptorWithTextStyle_compatibleWithTraitCollection(style:NSString, traitCollection:UITraitCollection):UIFontDescriptor;
-  @:native("fontDescriptorByAddingAttributes") public function fontDescriptorByAddingAttributes(attributes:Dynamic /*Dynamic*/):UIFontDescriptor;
-  @:native("fontDescriptorWithFace") public function fontDescriptorWithFace(newFace:NSString):UIFontDescriptor;
-  @:native("matrix") public function matrix():CGAffineTransform;
-  @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIFontDescriptor;
-  @:native("initWithFontAttributes") public function initWithFontAttributes(attributes:Dynamic /*Dynamic*/):UIFontDescriptor;
-  @:native("fontDescriptorWithFamily") public function fontDescriptorWithFamily(newFamily:NSString):UIFontDescriptor;
-  @:native("fontDescriptorWithMatrix") public function fontDescriptorWithMatrix(matrix:CGAffineTransform):UIFontDescriptor;
-  @:native("matchingFontDescriptorsWithMandatoryKeys") public function matchingFontDescriptorsWithMandatoryKeys(mandatoryKeys:Dynamic /*Dynamic*/):Dynamic /*Dynamic*/;
-  @:native("fontDescriptorWithSize") public function fontDescriptorWithSize(newPointSize:Float):UIFontDescriptor;
-  @:native("fontAttributes") public function fontAttributes():Dynamic /*Dynamic*/;
-  @:native("alloc") public static function alloc():UIFontDescriptor;
-  @:native("fontDescriptorWithSymbolicTraits") public function fontDescriptorWithSymbolicTraits(symbolicTraits:UIFontDescriptorSymbolicTraits):UIFontDescriptor;
-  @:native("autorelease") public function autorelease():UIFontDescriptor;
-  @:native("init") public function init():UIFontDescriptor;
-  @:native("postscriptName") public function postscriptName():NSString;
+  @:native("symbolicTraits") public function symbolicTraits():UIFontDescriptorSymbolicTraits;
 }

@@ -10,35 +10,35 @@ import haxe.Int64;
 extern class NSDateComponentsFormatter
 extends NSFormatter
 {
-  @:native("stringFromDateComponents") public function stringFromDateComponents(components:NSDateComponents):NSString;
-  @:native("zeroFormattingBehavior") public function zeroFormattingBehavior():NSDateComponentsFormatterZeroFormattingBehavior;
-  @:native("setIncludesTimeRemainingPhrase") public function setIncludesTimeRemainingPhrase(includesTimeRemainingPhrase:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("stringFromDate:toDate") public function stringFromDate_toDate(startDate:NSDate, endDate:NSDate):NSString;
-  @:native("allowedUnits") public function allowedUnits():NSCalendarUnit;
-  @:native("setAllowsFractionalUnits") public function setAllowsFractionalUnits(allowsFractionalUnits:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("includesApproximationPhrase") public function includesApproximationPhrase():Dynamic /*Bool*/;
-  @:native("includesTimeRemainingPhrase") public function includesTimeRemainingPhrase():Dynamic /*Bool*/;
-  @:overload(function(obj:Dynamic /*Dynamic*/, string:NSString, error:NSString):Dynamic /*Bool*/ {})
-  @:native("getObjectValue:forString:errorDescription") override public function getObjectValue_forString_errorDescription(obj:Dynamic /*Dynamic*/, string:NSString, error:NSString):Dynamic /*Bool*/;
-  @:native("unitsStyle") public function unitsStyle():NSDateComponentsFormatterUnitsStyle;
-  @:native("calendar") public function calendar():NSCalendar;
-  @:native("stringFromTimeInterval") public function stringFromTimeInterval(ti:Float):NSString;
-  @:native("setZeroFormattingBehavior") public function setZeroFormattingBehavior(zeroFormattingBehavior:NSDateComponentsFormatterZeroFormattingBehavior):Dynamic /*Void*/;
-  @:native("setMaximumUnitCount") public function setMaximumUnitCount(maximumUnitCount:Int):Dynamic /*Void*/;
-  @:native("allowsFractionalUnits") public function allowsFractionalUnits():Dynamic /*Bool*/;
-  @:native("formattingContext") public function formattingContext():NSFormattingContext;
-  @:native("setAllowedUnits") public function setAllowedUnits(allowedUnits:NSCalendarUnit):Dynamic /*Void*/;
-  @:native("maximumUnitCount") public function maximumUnitCount():Int;
-  @:overload(function(obj:Dynamic /*Dynamic*/):NSString {})
-  @:native("stringForObjectValue") override public function stringForObjectValue(obj:Dynamic /*Dynamic*/):NSString;
-  @:native("localizedStringFromDateComponents:unitsStyle") public static function localizedStringFromDateComponents_unitsStyle(components:NSDateComponents, unitsStyle:NSDateComponentsFormatterUnitsStyle):NSString;
-  @:native("setCalendar") public function setCalendar(calendar:NSCalendar):Dynamic /*Void*/;
-  @:native("setIncludesApproximationPhrase") public function setIncludesApproximationPhrase(includesApproximationPhrase:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("collapsesLargestUnit") public function collapsesLargestUnit():Dynamic /*Bool*/;
-  @:native("setFormattingContext") public function setFormattingContext(formattingContext:NSFormattingContext):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSDateComponentsFormatter;
+  @:native("allowedUnits") public function allowedUnits():NSCalendarUnit;
+  @:native("allowsFractionalUnits") public function allowsFractionalUnits():Bool;
   @:overload(function():NSDateComponentsFormatter {})
   @:native("autorelease") override public function autorelease():NSFormatter;
-  @:native("setUnitsStyle") public function setUnitsStyle(unitsStyle:NSDateComponentsFormatterUnitsStyle):Dynamic /*Void*/;
-  @:native("setCollapsesLargestUnit") public function setCollapsesLargestUnit(collapsesLargestUnit:Dynamic /*Bool*/):Dynamic /*Void*/;
+  @:native("calendar") public function calendar():NSCalendar;
+  @:native("collapsesLargestUnit") public function collapsesLargestUnit():Bool;
+  @:native("formattingContext") public function formattingContext():NSFormattingContext;
+  @:overload(function(obj:Dynamic, string:NSString, error:NSString):Bool {})
+  @:native("getObjectValue:forString:errorDescription") override public function getObjectValue_forString_errorDescription(obj:Dynamic, string:NSString, error:NSString):Bool;
+  @:native("includesApproximationPhrase") public function includesApproximationPhrase():Bool;
+  @:native("includesTimeRemainingPhrase") public function includesTimeRemainingPhrase():Bool;
+  @:native("localizedStringFromDateComponents:unitsStyle") public static function localizedStringFromDateComponents_unitsStyle(components:NSDateComponents, unitsStyle:NSDateComponentsFormatterUnitsStyle):NSString;
+  @:native("maximumUnitCount") public function maximumUnitCount():Int;
+  @:native("setAllowedUnits") public function setAllowedUnits(allowedUnits:NSCalendarUnit):Void;
+  @:native("setAllowsFractionalUnits") public function setAllowsFractionalUnits(allowsFractionalUnits:Bool):Void;
+  @:native("setCalendar") public function setCalendar(calendar:NSCalendar):Void;
+  @:native("setCollapsesLargestUnit") public function setCollapsesLargestUnit(collapsesLargestUnit:Bool):Void;
+  @:native("setFormattingContext") public function setFormattingContext(formattingContext:NSFormattingContext):Void;
+  @:native("setIncludesApproximationPhrase") public function setIncludesApproximationPhrase(includesApproximationPhrase:Bool):Void;
+  @:native("setIncludesTimeRemainingPhrase") public function setIncludesTimeRemainingPhrase(includesTimeRemainingPhrase:Bool):Void;
+  @:native("setMaximumUnitCount") public function setMaximumUnitCount(maximumUnitCount:Int):Void;
+  @:native("setUnitsStyle") public function setUnitsStyle(unitsStyle:NSDateComponentsFormatterUnitsStyle):Void;
+  @:native("setZeroFormattingBehavior") public function setZeroFormattingBehavior(zeroFormattingBehavior:NSDateComponentsFormatterZeroFormattingBehavior):Void;
+  @:overload(function(obj:Dynamic):NSString {})
+  @:native("stringForObjectValue") override public function stringForObjectValue(obj:Dynamic):NSString;
+  @:native("stringFromDate:toDate") public function stringFromDate_toDate(startDate:NSDate, endDate:NSDate):NSString;
+  @:native("stringFromDateComponents") public function stringFromDateComponents(components:NSDateComponents):NSString;
+  @:native("stringFromTimeInterval") public function stringFromTimeInterval(ti:Float):NSString;
+  @:native("unitsStyle") public function unitsStyle():NSDateComponentsFormatterUnitsStyle;
+  @:native("zeroFormattingBehavior") public function zeroFormattingBehavior():NSDateComponentsFormatterZeroFormattingBehavior;
 }

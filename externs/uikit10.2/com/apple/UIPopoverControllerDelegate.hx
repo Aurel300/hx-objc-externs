@@ -9,4 +9,7 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIPopoverControllerDelegate
 {
+  @:native("popoverController:willRepositionPopoverToRect:inView") public function popoverController_willRepositionPopoverToRect_inView(popoverController:UIPopoverController, rect:CGRect, view:UIView):Void;
+  @:native("popoverControllerDidDismissPopover") public function popoverControllerDidDismissPopover(popoverController:UIPopoverController):Void;
+  @:native("popoverControllerShouldDismissPopover") public function popoverControllerShouldDismissPopover(popoverController:UIPopoverController):Bool;
 }

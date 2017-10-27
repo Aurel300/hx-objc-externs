@@ -9,10 +9,10 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIAccessibilityCustomRotorSearchPredicate
 {
-  @:native("currentItem") public function currentItem():UIAccessibilityCustomRotorItemResult;
-  @:native("setSearchDirection") public function setSearchDirection(searchDirection:UIAccessibilityCustomRotorDirection):Dynamic /*Void*/;
-  @:native("setCurrentItem") public function setCurrentItem(currentItem:UIAccessibilityCustomRotorItemResult):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIAccessibilityCustomRotorSearchPredicate;
   @:native("autorelease") public function autorelease():UIAccessibilityCustomRotorSearchPredicate;
+  @:native("currentItem") public function currentItem():UIAccessibilityCustomRotorItemResult;
   @:native("searchDirection") public function searchDirection():UIAccessibilityCustomRotorDirection;
+  @:native("setCurrentItem") public function setCurrentItem(currentItem:UIAccessibilityCustomRotorItemResult):Void;
+  @:native("setSearchDirection") public function setSearchDirection(searchDirection:UIAccessibilityCustomRotorDirection):Void;
 }

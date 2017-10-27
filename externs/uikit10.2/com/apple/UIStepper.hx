@@ -10,35 +10,35 @@ import haxe.Int64;
 extern class UIStepper
 extends UIControl
 {
-  @:native("autorepeat") public function autorepeat():Dynamic /*Bool*/;
-  @:native("backgroundImageForState") public function backgroundImageForState(state:UIControlState):UIImage;
-  @:native("incrementImageForState") public function incrementImageForState(state:UIControlState):UIImage;
-  @:native("minimumValue") public function minimumValue():Dynamic /*Float*/;
-  @:native("setMinimumValue") public function setMinimumValue(minimumValue:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("maximumValue") public function maximumValue():Dynamic /*Float*/;
-  @:native("setMaximumValue") public function setMaximumValue(maximumValue:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("isContinuous") public function isContinuous():Dynamic /*Bool*/;
-  @:native("setContinuous") public function setContinuous(continuous:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("value") public function value():Dynamic /*Float*/;
-  @:native("setIncrementImage:forState") public function setIncrementImage_forState(image:UIImage, state:UIControlState):Dynamic /*Void*/;
-  @:native("setBackgroundImage:forState") public function setBackgroundImage_forState(image:UIImage, state:UIControlState):Dynamic /*Void*/;
-  @:native("wraps") public function wraps():Dynamic /*Bool*/;
-  @:native("setValue") public function setValue(value:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("setWraps") public function setWraps(wraps:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setStepValue") public function setStepValue(stepValue:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("decrementImageForState") public function decrementImageForState(state:UIControlState):UIImage;
-  @:native("setAutorepeat") public function setAutorepeat(autorepeat:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:overload(function(tintColor:UIColor):Dynamic /*Void*/ {})
-  @:native("setTintColor") override public function setTintColor(tintColor:UIColor):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIStepper;
-  @:native("stepValue") public function stepValue():Dynamic /*Float*/;
   @:overload(function():UIView {})
   @:overload(function():UIControl {})
   @:overload(function():UIStepper {})
   @:native("autorelease") override public function autorelease():UIResponder;
-  @:native("setDividerImage:forLeftSegmentState:rightSegmentState") public function setDividerImage_forLeftSegmentState_rightSegmentState(image:UIImage, leftState:UIControlState, rightState:UIControlState):Dynamic /*Void*/;
+  @:native("autorepeat") public function autorepeat():Bool;
+  @:native("backgroundImageForState") public function backgroundImageForState(state:UIControlState):UIImage;
+  @:native("decrementImageForState") public function decrementImageForState(state:UIControlState):UIImage;
   @:native("dividerImageForLeftSegmentState:rightSegmentState") public function dividerImageForLeftSegmentState_rightSegmentState(state:UIControlState, state:UIControlState):UIImage;
-  @:native("setDecrementImage:forState") public function setDecrementImage_forState(image:UIImage, state:UIControlState):Dynamic /*Void*/;
+  @:native("incrementImageForState") public function incrementImageForState(state:UIControlState):UIImage;
+  @:native("isContinuous") public function isContinuous():Bool;
+  @:native("maximumValue") public function maximumValue():Float;
+  @:native("minimumValue") public function minimumValue():Float;
+  @:native("setAutorepeat") public function setAutorepeat(autorepeat:Bool):Void;
+  @:native("setBackgroundImage:forState") public function setBackgroundImage_forState(image:UIImage, state:UIControlState):Void;
+  @:native("setContinuous") public function setContinuous(continuous:Bool):Void;
+  @:native("setDecrementImage:forState") public function setDecrementImage_forState(image:UIImage, state:UIControlState):Void;
+  @:native("setDividerImage:forLeftSegmentState:rightSegmentState") public function setDividerImage_forLeftSegmentState_rightSegmentState(image:UIImage, leftState:UIControlState, rightState:UIControlState):Void;
+  @:native("setIncrementImage:forState") public function setIncrementImage_forState(image:UIImage, state:UIControlState):Void;
+  @:native("setMaximumValue") public function setMaximumValue(maximumValue:Float):Void;
+  @:native("setMinimumValue") public function setMinimumValue(minimumValue:Float):Void;
+  @:native("setStepValue") public function setStepValue(stepValue:Float):Void;
+  @:overload(function(tintColor:UIColor):Void {})
+  @:native("setTintColor") override public function setTintColor(tintColor:UIColor):Void;
+  @:native("setValue") public function setValue(value:Float):Void;
+  @:native("setWraps") public function setWraps(wraps:Bool):Void;
+  @:native("stepValue") public function stepValue():Float;
   @:overload(function():UIColor {})
   @:native("tintColor") override public function tintColor():UIColor;
+  @:native("value") public function value():Float;
+  @:native("wraps") public function wraps():Bool;
 }

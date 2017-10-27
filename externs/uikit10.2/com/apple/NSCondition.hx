@@ -10,12 +10,14 @@ import haxe.Int64;
 extern class NSCondition
 implements cpp.objc.Protocol<NSLocking>
 {
-  @:native("broadcast") public function broadcast():Dynamic /*Void*/;
-  @:native("name") public function name():NSString;
-  @:native("wait") public function wait():Dynamic /*Void*/;
-  @:native("waitUntilDate") public function waitUntilDate(limit:NSDate):Dynamic /*Bool*/;
-  @:native("signal") public function signal():Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSCondition;
   @:native("autorelease") public function autorelease():NSCondition;
-  @:native("setName") public function setName(name:NSString):Dynamic /*Void*/;
+  @:native("broadcast") public function broadcast():Void;
+  /* Implicit from NSLocking */ @:native("lock") public function lock():Void;
+  @:native("name") public function name():NSString;
+  @:native("setName") public function setName(name:NSString):Void;
+  @:native("signal") public function signal():Void;
+  /* Implicit from NSLocking */ @:native("unlock") public function unlock():Void;
+  @:native("wait") public function wait():Void;
+  @:native("waitUntilDate") public function waitUntilDate(limit:NSDate):Bool;
 }

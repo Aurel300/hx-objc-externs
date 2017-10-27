@@ -10,24 +10,25 @@ import haxe.Int64;
 extern class NSPointerFunctions
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("initWithOptions") public function initWithOptions(options:NSPointerFunctionsOptions):NSPointerFunctions;
-  @:native("isEqualFunction") public function isEqualFunction():Dynamic /*Dynamic*/;
-  @:native("relinquishFunction") public function relinquishFunction():Dynamic /*Dynamic*/;
-  @:native("setSizeFunction") public function setSizeFunction(sizeFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("descriptionFunction") public function descriptionFunction():Dynamic /*Dynamic*/;
-  @:native("usesWeakReadAndWriteBarriers") public function usesWeakReadAndWriteBarriers():Dynamic /*Bool*/;
-  @:native("usesStrongWriteBarrier") public function usesStrongWriteBarrier():Dynamic /*Bool*/;
-  @:native("setUsesStrongWriteBarrier") public function setUsesStrongWriteBarrier(usesStrongWriteBarrier:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setRelinquishFunction") public function setRelinquishFunction(relinquishFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("setAcquireFunction") public function setAcquireFunction(acquireFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("setUsesWeakReadAndWriteBarriers") public function setUsesWeakReadAndWriteBarriers(usesWeakReadAndWriteBarriers:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("sizeFunction") public function sizeFunction():Dynamic /*Dynamic*/;
-  @:native("acquireFunction") public function acquireFunction():Dynamic /*Dynamic*/;
-  @:native("setHashFunction") public function setHashFunction(hashFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("setIsEqualFunction") public function setIsEqualFunction(isEqualFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("acquireFunction") public function acquireFunction():Dynamic;
   @:native("alloc") public static function alloc():NSPointerFunctions;
   @:native("autorelease") public function autorelease():NSPointerFunctions;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("descriptionFunction") public function descriptionFunction():Dynamic;
+  @:native("hashFunction") public function hashFunction():Dynamic;
+  @:native("initWithOptions") public function initWithOptions(options:NSPointerFunctionsOptions):NSPointerFunctions;
+  @:native("isEqualFunction") public function isEqualFunction():Dynamic;
   @:native("pointerFunctionsWithOptions") public static function pointerFunctionsWithOptions(options:NSPointerFunctionsOptions):NSPointerFunctions;
-  @:native("hashFunction") public function hashFunction():Dynamic /*Dynamic*/;
-  @:native("setDescriptionFunction") public function setDescriptionFunction(descriptionFunction:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("relinquishFunction") public function relinquishFunction():Dynamic;
+  @:native("setAcquireFunction") public function setAcquireFunction(acquireFunction:Dynamic):Void;
+  @:native("setDescriptionFunction") public function setDescriptionFunction(descriptionFunction:Dynamic):Void;
+  @:native("setHashFunction") public function setHashFunction(hashFunction:Dynamic):Void;
+  @:native("setIsEqualFunction") public function setIsEqualFunction(isEqualFunction:Dynamic):Void;
+  @:native("setRelinquishFunction") public function setRelinquishFunction(relinquishFunction:Dynamic):Void;
+  @:native("setSizeFunction") public function setSizeFunction(sizeFunction:Dynamic):Void;
+  @:native("setUsesStrongWriteBarrier") public function setUsesStrongWriteBarrier(usesStrongWriteBarrier:Bool):Void;
+  @:native("setUsesWeakReadAndWriteBarriers") public function setUsesWeakReadAndWriteBarriers(usesWeakReadAndWriteBarriers:Bool):Void;
+  @:native("sizeFunction") public function sizeFunction():Dynamic;
+  @:native("usesStrongWriteBarrier") public function usesStrongWriteBarrier():Bool;
+  @:native("usesWeakReadAndWriteBarriers") public function usesWeakReadAndWriteBarriers():Bool;
 }

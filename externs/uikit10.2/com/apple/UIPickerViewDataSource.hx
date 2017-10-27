@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIPickerViewDataSource
 {
+  @:native("numberOfComponentsInPickerView") public function numberOfComponentsInPickerView(pickerView:UIPickerView):Int;
+  @:native("pickerView:numberOfRowsInComponent") public function pickerView_numberOfRowsInComponent(pickerView:UIPickerView, component:Int):Int;
 }

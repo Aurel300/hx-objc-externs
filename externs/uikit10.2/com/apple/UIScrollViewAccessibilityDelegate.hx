@@ -10,4 +10,5 @@ import haxe.Int64;
 extern interface UIScrollViewAccessibilityDelegate
 extends cpp.objc.Protocol<UIScrollViewDelegate>
 {
+  @:native("accessibilityScrollStatusForScrollView") public function accessibilityScrollStatusForScrollView(scrollView:UIScrollView):NSString;
 }

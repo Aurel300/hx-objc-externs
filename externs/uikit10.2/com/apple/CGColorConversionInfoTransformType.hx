@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGColorConversionInfoTransformType")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGColorConversionInfoTransformType(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract CGColorConversionInfoTransformType(UInt) from UInt to UInt
 {
 }

@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSFastEnumeration
 {
+  @:native("countByEnumeratingWithState:objects:count") public function countByEnumeratingWithState_objects_count(state:Dynamic /*NSFastEnumerationState*/, buffer:Dynamic, len:Int):Int;
 }

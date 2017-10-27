@@ -10,8 +10,8 @@ import haxe.Int64;
 extern class UIGraphicsImageRendererContext
 extends UIGraphicsRendererContext
 {
-  @:native("currentImage") public function currentImage():UIImage;
   @:native("alloc") public static function alloc():UIGraphicsImageRendererContext;
   @:overload(function():UIGraphicsImageRendererContext {})
   @:native("autorelease") override public function autorelease():UIGraphicsRendererContext;
+  @:native("currentImage") public function currentImage():UIImage;
 }

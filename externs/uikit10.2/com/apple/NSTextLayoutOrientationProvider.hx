@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSTextLayoutOrientationProvider
 {
+  @:native("layoutOrientation") public function layoutOrientation():NSTextLayoutOrientation;
 }

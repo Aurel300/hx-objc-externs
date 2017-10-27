@@ -10,8 +10,8 @@ import haxe.Int64;
 extern class UIStoryboardPopoverSegue
 extends UIStoryboardSegue
 {
-  @:native("popoverController") public function popoverController():UIPopoverController;
   @:native("alloc") public static function alloc():UIStoryboardPopoverSegue;
   @:overload(function():UIStoryboardPopoverSegue {})
   @:native("autorelease") override public function autorelease():UIStoryboardSegue;
+  @:native("popoverController") public function popoverController():UIPopoverController;
 }

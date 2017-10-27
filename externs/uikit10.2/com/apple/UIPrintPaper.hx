@@ -9,10 +9,10 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIPrintPaper
 {
-  @:native("paperSize") public function paperSize():CGSize;
-  @:native("printableRect") public function printableRect():CGRect;
   @:native("alloc") public static function alloc():UIPrintPaper;
-  @:native("bestPaperForPageSize:withPapersFromArray") public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, paperList:Dynamic /*Dynamic*/):UIPrintPaper;
   @:native("autorelease") public function autorelease():UIPrintPaper;
+  @:native("bestPaperForPageSize:withPapersFromArray") public static function bestPaperForPageSize_withPapersFromArray(contentSize:CGSize, paperList:Dynamic):UIPrintPaper;
+  @:native("paperSize") public function paperSize():CGSize;
   @:native("printRect") public function printRect():CGRect;
+  @:native("printableRect") public function printableRect():CGRect;
 }

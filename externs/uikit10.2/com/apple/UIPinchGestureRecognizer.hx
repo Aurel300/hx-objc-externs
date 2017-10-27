@@ -10,10 +10,10 @@ import haxe.Int64;
 extern class UIPinchGestureRecognizer
 extends UIGestureRecognizer
 {
-  @:native("setScale") public function setScale(scale:Float):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIPinchGestureRecognizer;
   @:overload(function():UIPinchGestureRecognizer {})
   @:native("autorelease") override public function autorelease():UIGestureRecognizer;
   @:native("scale") public function scale():Float;
+  @:native("setScale") public function setScale(scale:Float):Void;
   @:native("velocity") public function velocity():Float;
 }

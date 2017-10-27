@@ -9,4 +9,9 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIStateRestoring
 {
+  @:native("applicationFinishedRestoringState") public function applicationFinishedRestoringState():Void;
+  @:native("decodeRestorableStateWithCoder") public function decodeRestorableStateWithCoder(coder:NSCoder):Void;
+  @:native("encodeRestorableStateWithCoder") public function encodeRestorableStateWithCoder(coder:NSCoder):Void;
+  @:native("objectRestorationClass") public function objectRestorationClass():Dynamic /*Class<UIObjectRestoration>*/;
+  @:native("restorationParent") public function restorationParent():UIStateRestoring;
 }

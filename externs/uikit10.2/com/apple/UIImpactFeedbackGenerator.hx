@@ -10,9 +10,9 @@ import haxe.Int64;
 extern class UIImpactFeedbackGenerator
 extends UIFeedbackGenerator
 {
-  @:native("impactOccurred") public function impactOccurred():Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIImpactFeedbackGenerator;
-  @:native("initWithStyle") public function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
   @:overload(function():UIImpactFeedbackGenerator {})
   @:native("autorelease") override public function autorelease():UIFeedbackGenerator;
+  @:native("impactOccurred") public function impactOccurred():Void;
+  @:native("initWithStyle") public function initWithStyle(style:UIImpactFeedbackStyle):UIImpactFeedbackGenerator;
 }

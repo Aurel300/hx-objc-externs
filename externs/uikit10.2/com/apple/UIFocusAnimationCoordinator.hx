@@ -9,7 +9,7 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIFocusAnimationCoordinator
 {
-  @:native("addCoordinatedAnimations:completion") public function addCoordinatedAnimations_completion(animations:Dynamic /*Dynamic*/, completion:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("addCoordinatedAnimations:completion") public function addCoordinatedAnimations_completion(animations:Dynamic, completion:Dynamic):Void;
   @:native("alloc") public static function alloc():UIFocusAnimationCoordinator;
   @:native("autorelease") public function autorelease():UIFocusAnimationCoordinator;
 }

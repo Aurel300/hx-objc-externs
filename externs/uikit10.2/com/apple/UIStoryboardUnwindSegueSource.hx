@@ -9,10 +9,10 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIStoryboardUnwindSegueSource
 {
-  @:native("sender") public function sender():Dynamic /*Dynamic*/;
-  @:native("unwindAction") public function unwindAction():Dynamic /*String*/;
   @:native("alloc") public static function alloc():UIStoryboardUnwindSegueSource;
-  @:native("sourceViewController") public function sourceViewController():UIViewController;
   @:native("autorelease") public function autorelease():UIStoryboardUnwindSegueSource;
   @:native("init") public function init():UIStoryboardUnwindSegueSource;
+  @:native("sender") public function sender():Dynamic;
+  @:native("sourceViewController") public function sourceViewController():UIViewController;
+  @:native("unwindAction") public function unwindAction():String;
 }

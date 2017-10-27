@@ -11,11 +11,11 @@ extern class NSUnitConcentrationMass
 extends NSDimension
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("milligramsPerDeciliter") public static function milligramsPerDeciliter():NSUnitConcentrationMass;
-  @:native("gramsPerLiter") public static function gramsPerLiter():NSUnitConcentrationMass;
   @:native("alloc") public static function alloc():NSUnitConcentrationMass;
   @:overload(function():NSDimension {})
   @:overload(function():NSUnitConcentrationMass {})
   @:native("autorelease") override public function autorelease():NSUnit;
-  @:native("millimolesPerLiterWithGramsPerMole") public static function millimolesPerLiterWithGramsPerMole(gramsPerMole:Dynamic /*Float*/):NSUnitConcentrationMass;
+  @:native("gramsPerLiter") public static function gramsPerLiter():NSUnitConcentrationMass;
+  @:native("milligramsPerDeciliter") public static function milligramsPerDeciliter():NSUnitConcentrationMass;
+  @:native("millimolesPerLiterWithGramsPerMole") public static function millimolesPerLiterWithGramsPerMole(gramsPerMole:Float):NSUnitConcentrationMass;
 }

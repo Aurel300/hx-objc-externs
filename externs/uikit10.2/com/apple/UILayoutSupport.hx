@@ -9,4 +9,8 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UILayoutSupport
 {
+  @:native("bottomAnchor") public function bottomAnchor():NSLayoutYAxisAnchor;
+  @:native("heightAnchor") public function heightAnchor():NSLayoutDimension;
+  @:native("length") public function length():Float;
+  @:native("topAnchor") public function topAnchor():NSLayoutYAxisAnchor;
 }

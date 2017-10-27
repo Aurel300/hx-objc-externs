@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface CAAction
 {
+  @:native("runActionForKey:object:arguments") public function runActionForKey_object_arguments(event:NSString, anObject:Dynamic, dict:NSDictionary):Void;
 }

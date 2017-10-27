@@ -10,14 +10,16 @@ import haxe.Int64;
 extern class CAEmitterBehavior
 implements cpp.objc.Protocol<NSCoding>
 {
-  @:native("name") public function name():NSString;
-  @:native("isEnabled") public function isEnabled():Dynamic /*Bool*/;
-  @:native("setEnabled") public function setEnabled(enabled:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("behaviorWithType") public static function behaviorWithType(type:NSString):CAEmitterBehavior;
-  @:native("type") public function type():NSString;
-  @:native("behaviorTypes") public static function behaviorTypes():Dynamic /*Dynamic*/;
   @:native("alloc") public static function alloc():CAEmitterBehavior;
-  @:native("initWithType") public function initWithType(type:NSString):Dynamic /*Dynamic*/;
   @:native("autorelease") public function autorelease():CAEmitterBehavior;
-  @:native("setName") public function setName(name:NSString):Dynamic /*Void*/;
+  @:native("behaviorTypes") public static function behaviorTypes():Dynamic;
+  @:native("behaviorWithType") public static function behaviorWithType(type:NSString):CAEmitterBehavior;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  @:native("initWithType") public function initWithType(type:NSString):Dynamic;
+  @:native("isEnabled") public function isEnabled():Bool;
+  @:native("name") public function name():NSString;
+  @:native("setEnabled") public function setEnabled(enabled:Bool):Void;
+  @:native("setName") public function setName(name:NSString):Void;
+  @:native("type") public function type():NSString;
 }

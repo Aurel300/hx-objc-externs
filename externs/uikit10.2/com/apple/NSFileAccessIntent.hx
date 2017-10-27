@@ -9,9 +9,9 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class NSFileAccessIntent
 {
-  @:native("writingIntentWithURL:options") public static function writingIntentWithURL_options(url:NSURL, options:NSFileCoordinatorWritingOptions):NSFileAccessIntent;
-  @:native("readingIntentWithURL:options") public static function readingIntentWithURL_options(url:NSURL, options:NSFileCoordinatorReadingOptions):NSFileAccessIntent;
-  @:native("alloc") public static function alloc():NSFileAccessIntent;
   @:native("URL") public function URL():NSURL;
+  @:native("alloc") public static function alloc():NSFileAccessIntent;
   @:native("autorelease") public function autorelease():NSFileAccessIntent;
+  @:native("readingIntentWithURL:options") public static function readingIntentWithURL_options(url:NSURL, options:NSFileCoordinatorReadingOptions):NSFileAccessIntent;
+  @:native("writingIntentWithURL:options") public static function writingIntentWithURL_options(url:NSURL, options:NSFileCoordinatorWritingOptions):NSFileAccessIntent;
 }

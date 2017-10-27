@@ -9,7 +9,7 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class CGPatternCallbacks
 {
-  public var version:Dynamic /*Int*/;
+  public var version:Int;
   public var drawPattern:Dynamic;
   public var releaseInfo:Dynamic;
 }

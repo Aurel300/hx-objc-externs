@@ -9,8 +9,8 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class NSAutoreleasePool
 {
-  @:native("addObject") public static function addObject(anObject:Dynamic /*Dynamic*/, anObject:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("drain") public function drain():Dynamic /*Void*/;
+  @:native("addObject") public static function addObject(anObject:Dynamic, anObject:Dynamic):Void;
   @:native("alloc") public static function alloc():NSAutoreleasePool;
   @:native("autorelease") public function autorelease():NSAutoreleasePool;
+  @:native("drain") public function drain():Void;
 }

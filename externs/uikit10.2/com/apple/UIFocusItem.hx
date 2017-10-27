@@ -10,4 +10,5 @@ import haxe.Int64;
 extern interface UIFocusItem
 extends cpp.objc.Protocol<UIFocusEnvironment>
 {
+  @:native("canBecomeFocused") public function canBecomeFocused():Bool;
 }

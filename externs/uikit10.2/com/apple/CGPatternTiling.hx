@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGPatternTiling")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGPatternTiling(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGPatternTiling(Int) from Int to Int
 {
 }

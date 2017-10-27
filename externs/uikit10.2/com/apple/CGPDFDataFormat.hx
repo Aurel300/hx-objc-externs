@@ -7,7 +7,7 @@ import haxe.Int64;
 @:native("CGPDFDataFormat")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGPDFDataFormat(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGPDFDataFormat(Int) from Int to Int
 {
   @:native("CGPDFDataFormatRaw") var CGPDFDataFormatRaw;
   @:native("CGPDFDataFormatJPEGEncoded") var CGPDFDataFormatJPEGEncoded;

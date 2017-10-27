@@ -10,8 +10,8 @@ import haxe.Int64;
 extern class UIViewPrintFormatter
 extends UIPrintFormatter
 {
-  @:native("view") public function view():UIView;
   @:native("alloc") public static function alloc():UIViewPrintFormatter;
   @:overload(function():UIViewPrintFormatter {})
   @:native("autorelease") override public function autorelease():UIPrintFormatter;
+  @:native("view") public function view():UIView;
 }

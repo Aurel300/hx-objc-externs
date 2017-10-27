@@ -10,8 +10,8 @@ import haxe.Int64;
 extern class UIBlurEffect
 extends UIVisualEffect
 {
-  @:native("effectWithStyle") public static function effectWithStyle(style:UIBlurEffectStyle):UIBlurEffect;
   @:native("alloc") public static function alloc():UIBlurEffect;
   @:overload(function():UIBlurEffect {})
   @:native("autorelease") override public function autorelease():UIVisualEffect;
+  @:native("effectWithStyle") public static function effectWithStyle(style:UIBlurEffectStyle):UIBlurEffect;
 }

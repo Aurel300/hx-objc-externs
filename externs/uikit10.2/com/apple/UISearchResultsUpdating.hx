@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UISearchResultsUpdating
 {
+  @:native("updateSearchResultsForSearchController") public function updateSearchResultsForSearchController(searchController:UISearchController):Void;
 }

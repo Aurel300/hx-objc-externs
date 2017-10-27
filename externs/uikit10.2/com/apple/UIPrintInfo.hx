@@ -11,20 +11,22 @@ extern class UIPrintInfo
 implements cpp.objc.Protocol<NSCopying>
 implements cpp.objc.Protocol<NSCoding>
 {
-  @:native("dictionaryRepresentation") public function dictionaryRepresentation():NSDictionary;
-  @:native("duplex") public function duplex():UIPrintInfoDuplex;
-  @:native("printInfo") public static function printInfo():UIPrintInfo;
-  @:native("setOutputType") public function setOutputType(outputType:UIPrintInfoOutputType):Dynamic /*Void*/;
-  @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIPrintInfo;
-  @:native("printInfoWithDictionary") public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
-  @:native("setPrinterID") public function setPrinterID(printerID:NSString):Dynamic /*Void*/;
-  @:native("setJobName") public function setJobName(jobName:NSString):Dynamic /*Void*/;
-  @:native("setDuplex") public function setDuplex(duplex:UIPrintInfoDuplex):Dynamic /*Void*/;
-  @:native("outputType") public function outputType():UIPrintInfoOutputType;
-  @:native("jobName") public function jobName():NSString;
-  @:native("orientation") public function orientation():UIPrintInfoOrientation;
-  @:native("setOrientation") public function setOrientation(orientation:UIPrintInfoOrientation):Dynamic /*Void*/;
-  @:native("printerID") public function printerID():NSString;
   @:native("alloc") public static function alloc():UIPrintInfo;
   @:native("autorelease") public function autorelease():UIPrintInfo;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("dictionaryRepresentation") public function dictionaryRepresentation():NSDictionary;
+  @:native("duplex") public function duplex():UIPrintInfoDuplex;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIPrintInfo;
+  @:native("jobName") public function jobName():NSString;
+  @:native("orientation") public function orientation():UIPrintInfoOrientation;
+  @:native("outputType") public function outputType():UIPrintInfoOutputType;
+  @:native("printInfo") public static function printInfo():UIPrintInfo;
+  @:native("printInfoWithDictionary") public static function printInfoWithDictionary(dictionary:NSDictionary):UIPrintInfo;
+  @:native("printerID") public function printerID():NSString;
+  @:native("setDuplex") public function setDuplex(duplex:UIPrintInfoDuplex):Void;
+  @:native("setJobName") public function setJobName(jobName:NSString):Void;
+  @:native("setOrientation") public function setOrientation(orientation:UIPrintInfoOrientation):Void;
+  @:native("setOutputType") public function setOutputType(outputType:UIPrintInfoOutputType):Void;
+  @:native("setPrinterID") public function setPrinterID(printerID:NSString):Void;
 }

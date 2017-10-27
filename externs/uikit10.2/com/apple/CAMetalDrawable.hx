@@ -10,4 +10,6 @@ import haxe.Int64;
 extern interface CAMetalDrawable
 extends cpp.objc.Protocol<MTLDrawable>
 {
+  @:native("layer") public function layer():CAMetalLayer;
+  @:native("texture") public function texture():Dynamic /*MTLTexture*/;
 }

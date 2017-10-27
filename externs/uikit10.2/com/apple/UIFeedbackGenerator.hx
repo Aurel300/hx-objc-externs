@@ -9,7 +9,7 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIFeedbackGenerator
 {
-  @:native("prepare") public function prepare():Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIFeedbackGenerator;
   @:native("autorelease") public function autorelease():UIFeedbackGenerator;
+  @:native("prepare") public function prepare():Void;
 }

@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSProgressReporting
 {
+  @:native("progress") public function progress():NSProgress;
 }

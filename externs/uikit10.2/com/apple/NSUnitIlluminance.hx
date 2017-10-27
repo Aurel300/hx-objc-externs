@@ -11,9 +11,9 @@ extern class NSUnitIlluminance
 extends NSDimension
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("lux") public static function lux():NSUnitIlluminance;
   @:native("alloc") public static function alloc():NSUnitIlluminance;
   @:overload(function():NSDimension {})
   @:overload(function():NSUnitIlluminance {})
   @:native("autorelease") override public function autorelease():NSUnit;
+  @:native("lux") public static function lux():NSUnitIlluminance;
 }

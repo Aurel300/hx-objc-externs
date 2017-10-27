@@ -10,27 +10,27 @@ import haxe.Int64;
 extern class NSByteCountFormatter
 extends NSFormatter
 {
-  @:native("setAllowsNonnumericFormatting") public function setAllowsNonnumericFormatting(allowsNonnumericFormatting:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("includesUnit") public function includesUnit():Dynamic /*Bool*/;
-  @:native("setCountStyle") public function setCountStyle(countStyle:NSByteCountFormatterCountStyle):Dynamic /*Void*/;
-  @:native("setAdaptive") public function setAdaptive(adaptive:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("zeroPadsFractionDigits") public function zeroPadsFractionDigits():Dynamic /*Bool*/;
-  @:native("setZeroPadsFractionDigits") public function setZeroPadsFractionDigits(zeroPadsFractionDigits:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("allowedUnits") public function allowedUnits():NSByteCountFormatterUnits;
-  @:native("setIncludesUnit") public function setIncludesUnit(includesUnit:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("stringFromByteCount") public function stringFromByteCount(byteCount:Dynamic /*Dynamic*/):NSString;
-  @:native("setIncludesActualByteCount") public function setIncludesActualByteCount(includesActualByteCount:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("includesActualByteCount") public function includesActualByteCount():Dynamic /*Bool*/;
-  @:native("setIncludesCount") public function setIncludesCount(includesCount:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("formattingContext") public function formattingContext():NSFormattingContext;
-  @:native("setAllowedUnits") public function setAllowedUnits(allowedUnits:NSByteCountFormatterUnits):Dynamic /*Void*/;
-  @:native("stringFromByteCount:countStyle") public static function stringFromByteCount_countStyle(byteCount:Dynamic /*Dynamic*/, countStyle:NSByteCountFormatterCountStyle):NSString;
-  @:native("includesCount") public function includesCount():Dynamic /*Bool*/;
-  @:native("countStyle") public function countStyle():NSByteCountFormatterCountStyle;
-  @:native("isAdaptive") public function isAdaptive():Dynamic /*Bool*/;
-  @:native("setFormattingContext") public function setFormattingContext(formattingContext:NSFormattingContext):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSByteCountFormatter;
-  @:native("allowsNonnumericFormatting") public function allowsNonnumericFormatting():Dynamic /*Bool*/;
+  @:native("allowedUnits") public function allowedUnits():NSByteCountFormatterUnits;
+  @:native("allowsNonnumericFormatting") public function allowsNonnumericFormatting():Bool;
   @:overload(function():NSByteCountFormatter {})
   @:native("autorelease") override public function autorelease():NSFormatter;
+  @:native("countStyle") public function countStyle():NSByteCountFormatterCountStyle;
+  @:native("formattingContext") public function formattingContext():NSFormattingContext;
+  @:native("includesActualByteCount") public function includesActualByteCount():Bool;
+  @:native("includesCount") public function includesCount():Bool;
+  @:native("includesUnit") public function includesUnit():Bool;
+  @:native("isAdaptive") public function isAdaptive():Bool;
+  @:native("setAdaptive") public function setAdaptive(adaptive:Bool):Void;
+  @:native("setAllowedUnits") public function setAllowedUnits(allowedUnits:NSByteCountFormatterUnits):Void;
+  @:native("setAllowsNonnumericFormatting") public function setAllowsNonnumericFormatting(allowsNonnumericFormatting:Bool):Void;
+  @:native("setCountStyle") public function setCountStyle(countStyle:NSByteCountFormatterCountStyle):Void;
+  @:native("setFormattingContext") public function setFormattingContext(formattingContext:NSFormattingContext):Void;
+  @:native("setIncludesActualByteCount") public function setIncludesActualByteCount(includesActualByteCount:Bool):Void;
+  @:native("setIncludesCount") public function setIncludesCount(includesCount:Bool):Void;
+  @:native("setIncludesUnit") public function setIncludesUnit(includesUnit:Bool):Void;
+  @:native("setZeroPadsFractionDigits") public function setZeroPadsFractionDigits(zeroPadsFractionDigits:Bool):Void;
+  @:native("stringFromByteCount") public function stringFromByteCount(byteCount:Dynamic):NSString;
+  @:native("stringFromByteCount:countStyle") public static function stringFromByteCount_countStyle(byteCount:Dynamic, countStyle:NSByteCountFormatterCountStyle):NSString;
+  @:native("zeroPadsFractionDigits") public function zeroPadsFractionDigits():Bool;
 }

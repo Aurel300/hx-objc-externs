@@ -10,13 +10,14 @@ import haxe.Int64;
 extern class UIBarButtonItemGroup
 implements cpp.objc.Protocol<NSCoding>
 {
-  @:native("initWithBarButtonItems:representativeItem") public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic /*Dynamic*/, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
-  @:native("barButtonItems") public function barButtonItems():Dynamic /*Dynamic*/;
   @:native("alloc") public static function alloc():UIBarButtonItemGroup;
-  @:native("setBarButtonItems") public function setBarButtonItems(barButtonItems:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("setRepresentativeItem") public function setRepresentativeItem(representativeItem:UIBarButtonItem):Dynamic /*Void*/;
-  @:native("isDisplayingRepresentativeItem") public function isDisplayingRepresentativeItem():Dynamic /*Bool*/;
   @:native("autorelease") public function autorelease():UIBarButtonItemGroup;
+  @:native("barButtonItems") public function barButtonItems():Dynamic;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("initWithBarButtonItems:representativeItem") public function initWithBarButtonItems_representativeItem(barButtonItems:Dynamic, representativeItem:UIBarButtonItem):UIBarButtonItemGroup;
   @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIBarButtonItemGroup;
+  @:native("isDisplayingRepresentativeItem") public function isDisplayingRepresentativeItem():Bool;
   @:native("representativeItem") public function representativeItem():UIBarButtonItem;
+  @:native("setBarButtonItems") public function setBarButtonItems(barButtonItems:Dynamic):Void;
+  @:native("setRepresentativeItem") public function setRepresentativeItem(representativeItem:UIBarButtonItem):Void;
 }

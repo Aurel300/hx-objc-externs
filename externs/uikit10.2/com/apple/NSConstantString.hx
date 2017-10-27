@@ -11,7 +11,6 @@ extern class NSConstantString
 extends NSSimpleCString
 {
   @:native("alloc") public static function alloc():NSConstantString;
-  @:overload(function():NSSimpleCString {})
   @:overload(function():NSConstantString {})
-  @:native("autorelease") override public function autorelease():NSString;
+  @:native("autorelease") override public function autorelease():NSSimpleCString;
 }

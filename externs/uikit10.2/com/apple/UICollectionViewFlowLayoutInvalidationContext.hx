@@ -10,11 +10,11 @@ import haxe.Int64;
 extern class UICollectionViewFlowLayoutInvalidationContext
 extends UICollectionViewLayoutInvalidationContext
 {
-  @:native("setInvalidateFlowLayoutDelegateMetrics") public function setInvalidateFlowLayoutDelegateMetrics(invalidateFlowLayoutDelegateMetrics:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("invalidateFlowLayoutAttributes") public function invalidateFlowLayoutAttributes():Dynamic /*Bool*/;
-  @:native("invalidateFlowLayoutDelegateMetrics") public function invalidateFlowLayoutDelegateMetrics():Dynamic /*Bool*/;
   @:native("alloc") public static function alloc():UICollectionViewFlowLayoutInvalidationContext;
-  @:native("setInvalidateFlowLayoutAttributes") public function setInvalidateFlowLayoutAttributes(invalidateFlowLayoutAttributes:Dynamic /*Bool*/):Dynamic /*Void*/;
   @:overload(function():UICollectionViewFlowLayoutInvalidationContext {})
   @:native("autorelease") override public function autorelease():UICollectionViewLayoutInvalidationContext;
+  @:native("invalidateFlowLayoutAttributes") public function invalidateFlowLayoutAttributes():Bool;
+  @:native("invalidateFlowLayoutDelegateMetrics") public function invalidateFlowLayoutDelegateMetrics():Bool;
+  @:native("setInvalidateFlowLayoutAttributes") public function setInvalidateFlowLayoutAttributes(invalidateFlowLayoutAttributes:Bool):Void;
+  @:native("setInvalidateFlowLayoutDelegateMetrics") public function setInvalidateFlowLayoutDelegateMetrics(invalidateFlowLayoutDelegateMetrics:Bool):Void;
 }

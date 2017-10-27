@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGImageAlphaInfo")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGImageAlphaInfo(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract CGImageAlphaInfo(UInt) from UInt to UInt
 {
 }

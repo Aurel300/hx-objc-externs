@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIDataSourceModelAssociation
 {
+  @:native("indexPathForElementWithModelIdentifier:inView") public function indexPathForElementWithModelIdentifier_inView(identifier:NSString, view:UIView):NSIndexPath;
+  @:native("modelIdentifierForElementAtIndexPath:inView") public function modelIdentifierForElementAtIndexPath_inView(idx:NSIndexPath, view:UIView):NSString;
 }

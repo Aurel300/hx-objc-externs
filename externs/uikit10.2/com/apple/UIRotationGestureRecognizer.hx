@@ -10,10 +10,10 @@ import haxe.Int64;
 extern class UIRotationGestureRecognizer
 extends UIGestureRecognizer
 {
-  @:native("rotation") public function rotation():Float;
   @:native("alloc") public static function alloc():UIRotationGestureRecognizer;
-  @:native("setRotation") public function setRotation(rotation:Float):Dynamic /*Void*/;
   @:overload(function():UIRotationGestureRecognizer {})
   @:native("autorelease") override public function autorelease():UIGestureRecognizer;
+  @:native("rotation") public function rotation():Float;
+  @:native("setRotation") public function setRotation(rotation:Float):Void;
   @:native("velocity") public function velocity():Float;
 }

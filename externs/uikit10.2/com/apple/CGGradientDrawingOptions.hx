@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGGradientDrawingOptions")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGGradientDrawingOptions(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract CGGradientDrawingOptions(UInt) from UInt to UInt
 {
 }

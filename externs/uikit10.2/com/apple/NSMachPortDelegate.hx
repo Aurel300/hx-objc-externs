@@ -10,4 +10,5 @@ import haxe.Int64;
 extern interface NSMachPortDelegate
 extends cpp.objc.Protocol<NSPortDelegate>
 {
+  @:native("handleMachMessage") public function handleMachMessage(msg:Void):Void;
 }

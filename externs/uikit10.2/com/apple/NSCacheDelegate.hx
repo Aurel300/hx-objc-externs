@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSCacheDelegate
 {
+  @:native("cache:willEvictObject") public function cache_willEvictObject(cache:NSCache, obj:Dynamic):Void;
 }

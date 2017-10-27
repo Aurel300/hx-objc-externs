@@ -9,12 +9,12 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UITextInputAssistantItem
 {
-  @:native("setAllowsHidingShortcuts") public function setAllowsHidingShortcuts(allowsHidingShortcuts:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setLeadingBarButtonGroups") public function setLeadingBarButtonGroups(leadingBarButtonGroups:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("allowsHidingShortcuts") public function allowsHidingShortcuts():Dynamic /*Bool*/;
-  @:native("trailingBarButtonGroups") public function trailingBarButtonGroups():Dynamic /*Dynamic*/;
   @:native("alloc") public static function alloc():UITextInputAssistantItem;
-  @:native("leadingBarButtonGroups") public function leadingBarButtonGroups():Dynamic /*Dynamic*/;
+  @:native("allowsHidingShortcuts") public function allowsHidingShortcuts():Bool;
   @:native("autorelease") public function autorelease():UITextInputAssistantItem;
-  @:native("setTrailingBarButtonGroups") public function setTrailingBarButtonGroups(trailingBarButtonGroups:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("leadingBarButtonGroups") public function leadingBarButtonGroups():Dynamic;
+  @:native("setAllowsHidingShortcuts") public function setAllowsHidingShortcuts(allowsHidingShortcuts:Bool):Void;
+  @:native("setLeadingBarButtonGroups") public function setLeadingBarButtonGroups(leadingBarButtonGroups:Dynamic):Void;
+  @:native("setTrailingBarButtonGroups") public function setTrailingBarButtonGroups(trailingBarButtonGroups:Dynamic):Void;
+  @:native("trailingBarButtonGroups") public function trailingBarButtonGroups():Dynamic;
 }

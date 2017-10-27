@@ -7,7 +7,7 @@ import haxe.Int64;
 @:native("NSTextCheckingType")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract NSTextCheckingType(Dynamic /*Dynamic*/) from Dynamic /*Dynamic*/ to Dynamic /*Dynamic*/
+extern abstract NSTextCheckingType(Dynamic) from Dynamic to Dynamic
 {
   @:native("NSTextCheckingTypeOrthography") var NSTextCheckingTypeOrthography;
   @:native("NSTextCheckingTypeSpelling") var NSTextCheckingTypeSpelling;

@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIDynamicAnimatorDelegate
 {
+  @:native("dynamicAnimatorDidPause") public function dynamicAnimatorDidPause(animator:UIDynamicAnimator):Void;
+  @:native("dynamicAnimatorWillResume") public function dynamicAnimatorWillResume(animator:UIDynamicAnimator):Void;
 }

@@ -10,18 +10,18 @@ import haxe.Int64;
 extern class UICollectionViewCell
 extends UICollectionReusableView
 {
-  @:native("isSelected") public function isSelected():Dynamic /*Bool*/;
-  @:native("setSelected") public function setSelected(selected:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setBackgroundView") public function setBackgroundView(backgroundView:UIView):Dynamic /*Void*/;
-  @:native("selectedBackgroundView") public function selectedBackgroundView():UIView;
-  @:native("setSelectedBackgroundView") public function setSelectedBackgroundView(selectedBackgroundView:UIView):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UICollectionViewCell;
-  @:native("setHighlighted") public function setHighlighted(highlighted:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("backgroundView") public function backgroundView():UIView;
   @:overload(function():UIView {})
   @:overload(function():UICollectionReusableView {})
   @:overload(function():UICollectionViewCell {})
   @:native("autorelease") override public function autorelease():UIResponder;
+  @:native("backgroundView") public function backgroundView():UIView;
   @:native("contentView") public function contentView():UIView;
-  @:native("isHighlighted") public function isHighlighted():Dynamic /*Bool*/;
+  @:native("isHighlighted") public function isHighlighted():Bool;
+  @:native("isSelected") public function isSelected():Bool;
+  @:native("selectedBackgroundView") public function selectedBackgroundView():UIView;
+  @:native("setBackgroundView") public function setBackgroundView(backgroundView:UIView):Void;
+  @:native("setHighlighted") public function setHighlighted(highlighted:Bool):Void;
+  @:native("setSelected") public function setSelected(selected:Bool):Void;
+  @:native("setSelectedBackgroundView") public function setSelectedBackgroundView(selectedBackgroundView:UIView):Void;
 }

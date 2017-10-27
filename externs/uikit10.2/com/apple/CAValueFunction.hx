@@ -10,8 +10,10 @@ import haxe.Int64;
 extern class CAValueFunction
 implements cpp.objc.Protocol<NSCoding>
 {
-  @:native("name") public function name():NSString;
   @:native("alloc") public static function alloc():CAValueFunction;
-  @:native("functionWithName") public static function functionWithName(name:NSString):CAValueFunction;
   @:native("autorelease") public function autorelease():CAValueFunction;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("functionWithName") public static function functionWithName(name:NSString):CAValueFunction;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  @:native("name") public function name():NSString;
 }

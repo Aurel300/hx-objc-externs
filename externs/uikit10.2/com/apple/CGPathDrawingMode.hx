@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGPathDrawingMode")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGPathDrawingMode(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGPathDrawingMode(Int) from Int to Int
 {
 }

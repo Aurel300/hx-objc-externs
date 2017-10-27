@@ -12,52 +12,54 @@ extends UIView
 implements cpp.objc.Protocol<NSCoding>
 implements cpp.objc.Protocol<UIContentSizeCategoryAdjusting>
 {
-  @:native("attributedText") public function attributedText():NSAttributedString;
-  @:native("drawTextInRect") public function drawTextInRect(rect:CGRect):Dynamic /*Void*/;
-  @:native("setFont") public function setFont(font:UIFont):Dynamic /*Void*/;
-  @:native("setHighlightedTextColor") public function setHighlightedTextColor(highlightedTextColor:UIColor):Dynamic /*Void*/;
-  @:native("minimumScaleFactor") public function minimumScaleFactor():Float;
-  @:native("setTextColor") public function setTextColor(textColor:UIColor):Dynamic /*Void*/;
-  @:overload(function():Dynamic /*Bool*/ {})
-  @:native("isUserInteractionEnabled") override public function isUserInteractionEnabled():Dynamic /*Bool*/;
-  @:native("setBaselineAdjustment") public function setBaselineAdjustment(baselineAdjustment:UIBaselineAdjustment):Dynamic /*Void*/;
-  @:native("shadowColor") public function shadowColor():UIColor;
-  @:native("highlightedTextColor") public function highlightedTextColor():UIColor;
-  @:native("isHighlighted") public function isHighlighted():Dynamic /*Bool*/;
-  @:native("setMinimumFontSize") public function setMinimumFontSize(minimumFontSize:Float):Dynamic /*Void*/;
-  @:native("text") public function text():NSString;
-  @:native("isEnabled") public function isEnabled():Dynamic /*Bool*/;
-  @:native("adjustsLetterSpacingToFitWidth") public function adjustsLetterSpacingToFitWidth():Dynamic /*Bool*/;
-  @:native("preferredMaxLayoutWidth") public function preferredMaxLayoutWidth():Float;
-  @:native("setShadowColor") public function setShadowColor(shadowColor:UIColor):Dynamic /*Void*/;
-  @:native("setHighlighted") public function setHighlighted(highlighted:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setAdjustsLetterSpacingToFitWidth") public function setAdjustsLetterSpacingToFitWidth(adjustsLetterSpacingToFitWidth:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("lineBreakMode") public function lineBreakMode():NSLineBreakMode;
-  @:native("shadowOffset") public function shadowOffset():CGSize;
-  @:native("setLineBreakMode") public function setLineBreakMode(lineBreakMode:NSLineBreakMode):Dynamic /*Void*/;
-  @:native("setText") public function setText(text:NSString):Dynamic /*Void*/;
-  @:native("setNumberOfLines") public function setNumberOfLines(numberOfLines:Int):Dynamic /*Void*/;
-  @:native("textColor") public function textColor():UIColor;
-  @:native("textAlignment") public function textAlignment():NSTextAlignment;
-  @:native("setAdjustsFontSizeToFitWidth") public function setAdjustsFontSizeToFitWidth(adjustsFontSizeToFitWidth:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("baselineAdjustment") public function baselineAdjustment():UIBaselineAdjustment;
-  @:native("minimumFontSize") public function minimumFontSize():Float;
-  @:native("setShadowOffset") public function setShadowOffset(shadowOffset:CGSize):Dynamic /*Void*/;
-  @:native("setEnabled") public function setEnabled(enabled:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("setPreferredMaxLayoutWidth") public function setPreferredMaxLayoutWidth(preferredMaxLayoutWidth:Float):Dynamic /*Void*/;
-  @:overload(function(userInteractionEnabled:Dynamic /*Bool*/):Dynamic /*Void*/ {})
-  @:native("setUserInteractionEnabled") override public function setUserInteractionEnabled(userInteractionEnabled:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("adjustsFontSizeToFitWidth") public function adjustsFontSizeToFitWidth():Dynamic /*Bool*/;
-  @:native("setAttributedText") public function setAttributedText(attributedText:NSAttributedString):Dynamic /*Void*/;
-  @:native("numberOfLines") public function numberOfLines():Int;
-  @:native("setAllowsDefaultTighteningForTruncation") public function setAllowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation:Dynamic /*Bool*/):Dynamic /*Void*/;
+  /* Implicit from UIContentSizeCategoryAdjusting */ @:native("adjustsFontForContentSizeCategory") public function adjustsFontForContentSizeCategory():Bool;
+  @:native("adjustsFontSizeToFitWidth") public function adjustsFontSizeToFitWidth():Bool;
+  @:native("adjustsLetterSpacingToFitWidth") public function adjustsLetterSpacingToFitWidth():Bool;
   @:native("alloc") public static function alloc():UILabel;
-  @:native("textRectForBounds:limitedToNumberOfLines") public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, numberOfLines:Int):CGRect;
-  @:native("font") public function font():UIFont;
-  @:native("setMinimumScaleFactor") public function setMinimumScaleFactor(minimumScaleFactor:Float):Dynamic /*Void*/;
+  @:native("allowsDefaultTighteningForTruncation") public function allowsDefaultTighteningForTruncation():Bool;
+  @:native("attributedText") public function attributedText():NSAttributedString;
   @:overload(function():UIView {})
   @:overload(function():UILabel {})
   @:native("autorelease") override public function autorelease():UIResponder;
-  @:native("setTextAlignment") public function setTextAlignment(textAlignment:NSTextAlignment):Dynamic /*Void*/;
-  @:native("allowsDefaultTighteningForTruncation") public function allowsDefaultTighteningForTruncation():Dynamic /*Bool*/;
+  @:native("baselineAdjustment") public function baselineAdjustment():UIBaselineAdjustment;
+  @:native("drawTextInRect") public function drawTextInRect(rect:CGRect):Void;
+  @:native("font") public function font():UIFont;
+  @:native("highlightedTextColor") public function highlightedTextColor():UIColor;
+  @:native("isEnabled") public function isEnabled():Bool;
+  @:native("isHighlighted") public function isHighlighted():Bool;
+  @:overload(function():Bool {})
+  @:native("isUserInteractionEnabled") override public function isUserInteractionEnabled():Bool;
+  @:native("lineBreakMode") public function lineBreakMode():NSLineBreakMode;
+  @:native("minimumFontSize") public function minimumFontSize():Float;
+  @:native("minimumScaleFactor") public function minimumScaleFactor():Float;
+  @:native("numberOfLines") public function numberOfLines():Int;
+  @:native("preferredMaxLayoutWidth") public function preferredMaxLayoutWidth():Float;
+  /* Implicit from UIContentSizeCategoryAdjusting */ @:native("setAdjustsFontForContentSizeCategory") public function setAdjustsFontForContentSizeCategory(adjustsFontForContentSizeCategory:Bool):Void;
+  @:native("setAdjustsFontSizeToFitWidth") public function setAdjustsFontSizeToFitWidth(adjustsFontSizeToFitWidth:Bool):Void;
+  @:native("setAdjustsLetterSpacingToFitWidth") public function setAdjustsLetterSpacingToFitWidth(adjustsLetterSpacingToFitWidth:Bool):Void;
+  @:native("setAllowsDefaultTighteningForTruncation") public function setAllowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation:Bool):Void;
+  @:native("setAttributedText") public function setAttributedText(attributedText:NSAttributedString):Void;
+  @:native("setBaselineAdjustment") public function setBaselineAdjustment(baselineAdjustment:UIBaselineAdjustment):Void;
+  @:native("setEnabled") public function setEnabled(enabled:Bool):Void;
+  @:native("setFont") public function setFont(font:UIFont):Void;
+  @:native("setHighlighted") public function setHighlighted(highlighted:Bool):Void;
+  @:native("setHighlightedTextColor") public function setHighlightedTextColor(highlightedTextColor:UIColor):Void;
+  @:native("setLineBreakMode") public function setLineBreakMode(lineBreakMode:NSLineBreakMode):Void;
+  @:native("setMinimumFontSize") public function setMinimumFontSize(minimumFontSize:Float):Void;
+  @:native("setMinimumScaleFactor") public function setMinimumScaleFactor(minimumScaleFactor:Float):Void;
+  @:native("setNumberOfLines") public function setNumberOfLines(numberOfLines:Int):Void;
+  @:native("setPreferredMaxLayoutWidth") public function setPreferredMaxLayoutWidth(preferredMaxLayoutWidth:Float):Void;
+  @:native("setShadowColor") public function setShadowColor(shadowColor:UIColor):Void;
+  @:native("setShadowOffset") public function setShadowOffset(shadowOffset:CGSize):Void;
+  @:native("setText") public function setText(text:NSString):Void;
+  @:native("setTextAlignment") public function setTextAlignment(textAlignment:NSTextAlignment):Void;
+  @:native("setTextColor") public function setTextColor(textColor:UIColor):Void;
+  @:overload(function(userInteractionEnabled:Bool):Void {})
+  @:native("setUserInteractionEnabled") override public function setUserInteractionEnabled(userInteractionEnabled:Bool):Void;
+  @:native("shadowColor") public function shadowColor():UIColor;
+  @:native("shadowOffset") public function shadowOffset():CGSize;
+  @:native("text") public function text():NSString;
+  @:native("textAlignment") public function textAlignment():NSTextAlignment;
+  @:native("textColor") public function textColor():UIColor;
+  @:native("textRectForBounds:limitedToNumberOfLines") public function textRectForBounds_limitedToNumberOfLines(bounds:CGRect, numberOfLines:Int):CGRect;
 }

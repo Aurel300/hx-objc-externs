@@ -9,17 +9,17 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class NSProxy
 {
-  @:native("allocWithZone") public static function allocWithZone(zone:Dynamic /*_NSZone*/):Dynamic /*Dynamic*/;
-  @:native("methodSignatureForSelector") public function methodSignatureForSelector(sel:Dynamic /*String*/):NSMethodSignature;
-  @:native("respondsToSelector") public static function respondsToSelector(aSelector:Dynamic /*String*/):Dynamic /*Bool*/;
-  @:native("retainWeakReference") public function retainWeakReference():Dynamic /*Bool*/;
-  @:native("forwardInvocation") public function forwardInvocation(invocation:NSInvocation):Dynamic /*Void*/;
-  @:native("debugDescription") public function debugDescription():NSString;
-  @:native("dealloc") public function dealloc():Dynamic /*Void*/;
-  @:native("finalize") public function finalize():Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSProxy;
-  @:native("class") public static function class():Dynamic;
-  @:native("description") public function description():NSString;
+  @:native("allocWithZone") public static function allocWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("allowsWeakReference") public function allowsWeakReference():Bool;
   @:native("autorelease") public function autorelease():NSProxy;
-  @:native("allowsWeakReference") public function allowsWeakReference():Dynamic /*Bool*/;
+  @:native("class") public static function cls():Dynamic;
+  @:native("dealloc") public function dealloc():Void;
+  @:native("debugDescription") public function debugDescription():NSString;
+  @:native("description") public function description():NSString;
+  @:native("finalize") public function finalize():Void;
+  @:native("forwardInvocation") public function forwardInvocation(invocation:NSInvocation):Void;
+  @:native("methodSignatureForSelector") public function methodSignatureForSelector(sel:String):NSMethodSignature;
+  @:native("respondsToSelector") public static function respondsToSelector(aSelector:String):Bool;
+  @:native("retainWeakReference") public function retainWeakReference():Bool;
 }

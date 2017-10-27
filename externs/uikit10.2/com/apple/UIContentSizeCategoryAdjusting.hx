@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIContentSizeCategoryAdjusting
 {
+  @:native("adjustsFontForContentSizeCategory") public function adjustsFontForContentSizeCategory():Bool;
+  @:native("setAdjustsFontForContentSizeCategory") public function setAdjustsFontForContentSizeCategory(adjustsFontForContentSizeCategory:Bool):Void;
 }

@@ -9,13 +9,13 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIDynamicBehavior
 {
-  @:native("removeChildBehavior") public function removeChildBehavior(behavior:UIDynamicBehavior):Dynamic /*Void*/;
-  @:native("willMoveToAnimator") public function willMoveToAnimator(dynamicAnimator:UIDynamicAnimator):Dynamic /*Void*/;
-  @:native("action") public function action():Dynamic /*Dynamic*/;
-  @:native("setAction") public function setAction(action:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("dynamicAnimator") public function dynamicAnimator():UIDynamicAnimator;
+  @:native("action") public function action():Dynamic;
+  @:native("addChildBehavior") public function addChildBehavior(behavior:UIDynamicBehavior):Void;
   @:native("alloc") public static function alloc():UIDynamicBehavior;
-  @:native("addChildBehavior") public function addChildBehavior(behavior:UIDynamicBehavior):Dynamic /*Void*/;
   @:native("autorelease") public function autorelease():UIDynamicBehavior;
-  @:native("childBehaviors") public function childBehaviors():Dynamic /*Dynamic*/;
+  @:native("childBehaviors") public function childBehaviors():Dynamic;
+  @:native("dynamicAnimator") public function dynamicAnimator():UIDynamicAnimator;
+  @:native("removeChildBehavior") public function removeChildBehavior(behavior:UIDynamicBehavior):Void;
+  @:native("setAction") public function setAction(action:Dynamic):Void;
+  @:native("willMoveToAnimator") public function willMoveToAnimator(dynamicAnimator:UIDynamicAnimator):Void;
 }

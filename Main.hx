@@ -175,7 +175,7 @@ class Main {
   public static function main() {
     switch (Sys.args()) {
       case [header, global, pack, output]:
-      header = Path.normalize(output);
+      header = Path.normalize(header);
       if (!FileSystem.exists(header)) {
         Sys.println('file not found: $header');
         Sys.exit(1);
@@ -218,6 +218,13 @@ class Main {
       function isNeeded(name:String):Bool {
         return (name.startsWith("UI") || name.startsWith("NS")
             || name.startsWith("CA") || name.startsWith("CG"));
+      }
+      function mapKeywords(name:String):String {
+        return (switch (name) {
+            case "function": "func";
+            case "class": "cls";
+            case _: name;
+          });
       }
       intfs[global] = {
            name: global
@@ -343,10 +350,6 @@ class Main {
           }
           case ParamDecl(func, name, type) if (curIntf != null && curMeth != null):
           if (func == (curIntf.name == global)) {
-            name = (switch (name) {
-                case "function": "func";
-                case _: name;
-              });
             curIntf.methods[curMeth].args[curIntf.methods[curMeth].types.length] = name;
             curIntf.methods[curMeth].types.push(type);
           }
@@ -364,6 +367,9 @@ class Main {
           ,"UInt", "Int64", "Float", "String"
         ];
       function validType(type:String):String {
+        if (type.any(skipped)) {
+          return type;
+        }
         while (defs.exists(type) && defs.get(type) != type) {
           type = defs[type];
           if (type.any(skipped)) {
@@ -383,35 +389,70 @@ class Main {
         var vtype = validType(denum.type);
         out.add('($vtype) from $vtype to $vtype\n{');
         for (v in denum.values) {
-          out.add('\n  @:native("$v") var $v;');
+          out.add('\n  @:native("$v") var ${mapKeywords(v)};');
         }
         out.add("\n}\n");
-        File.saveContent('externs/com/apple/${denum.name}.hx', out.toString());
+        File.saveContent(Path.join([output, denum.name + ".hx"]), out.toString());
+      }
+      function getSuper(intf:Intf):Intf {
+        if (intf.sup != null && intf.sup != "NSObject"
+            && intfs.exists(intf.sup) && !intf.sup.any(skipped)) {
+          return intfs[intf.sup];
+        }
+        return null;
+      }
+      function getSuperMethods(method:Method, cur:Method, intf:Intf):Array<Method> {
+        if (method.stat) {
+          return [method];
+        }
+        var ret = (cur != null && !cur.stat) ? [cur] : [];
+        var sup = getSuper(intf);
+        if (sup != null) {
+          return getSuperMethods(
+              method, sup.methods[method.native], sup
+            ).concat(ret);
+        }
+        return ret;
+      }
+      function addProtocolMethods(from:Intf, to:Intf) {
+        if (from != null && !to.isProtocol) {
+          for (m in from.methods) {
+            if (m.stat || to.methods.exists(m.native)) {
+              continue;
+            }
+            var signatures = getSuperMethods(m, null, to);
+            if (signatures.length == 0) {
+              to.methods[m.native] = {
+                   native: m.native
+                  ,code: m.code
+                  ,types: m.types
+                  ,args: m.args
+                  ,stat: m.stat
+                  ,ret: m.ret
+                  ,comment: 'Implicit from ${from.name}'
+                };
+            }
+          }
+          for (p in from.protocols) {
+            if (p != "NSObject" && p != from.name) {
+              addProtocolMethods(intfs[p], to);
+            }
+          }
+        }
       }
       for (intf in intfs) {
-        if (skipped.indexOf(intf.name) != -1) continue;
-        function getSuper(intf:Intf):Intf {
-          if (intf.sup != null && intf.sup != "NSObject" && intfs.exists(intf.sup)) {
-            return intfs[intf.sup];
+        if (intf.name.any(skipped)) continue;
+        for (p in intf.protocols) {
+          if (p != "NSObject" && p != intf.name) {
+            addProtocolMethods(intfs[p], intf);
           }
-          return null;
         }
-        function getSuperMethods(method:Method, cur:Method, intf:Intf):Array<Method> {
-          if (method.stat) {
-            return [method];
-          }
-          var ret = (cur != null && !cur.stat) ? [cur] : [];
-          var sup = getSuper(intf);
-          if (sup != null) {
-            return getSuperMethods(
-                method, sup.methods[method.native], sup
-              ).concat(ret);
-          }
-          return ret;
-        }
+      }
+      for (intf in intfs) {
+        if (intf.name.any(skipped)) continue;
         function formatArgs(method:Method):String {
           return [ for (ai in 0...method.args.length)
-              method.args[ai] + ":" + (ai < method.types.length ? validType(method.types[ai]) : "Dynamic")
+              mapKeywords(method.args[ai]) + ":" + (ai < method.types.length ? validType(method.types[ai]) : "Dynamic")
             ].join(", ");
         }
         //Sys.println('${intf.name} extends ${intf.sup}');
@@ -426,7 +467,12 @@ class Main {
         out.add(intf.isProtocol ? "interface " : "class ");
         out.add(intf.name);
         if (getSuper(intf) != null) {
-          out.add('\nextends ${intf.sup}');
+          out.add('\nextends ');
+          out.add(switch (intf.sup) {
+              case "NSDictionary": "cpp.objc.NSDictionary.DictionaryData";
+              case "NSString": "cpp.objc.NSString.NSStringData";
+              case _: intf.sup;
+            });
         }
         for (p in intf.protocols) {
           if (p != "NSObject" && p != intf.name) {
@@ -435,31 +481,39 @@ class Main {
           }
         }
         out.add("\n{");
-        if (!intf.isProtocol) {
-          for (m in intf.methods) {
-            var signatures = getSuperMethods(m, m, intf);
-            for (i in 1...signatures.length) {
-              var s = signatures[i];
-              out.add("\n  @:overload(function(");
-              out.add(formatArgs(s));
-              out.add("):");
-              out.add(validType(s.ret));
-              out.add(" {})");
-            }
-            out.add('\n  @:native("${m.native}")');
-            if (signatures.length > 1) {
-              out.add(" override");
-            }
-            out.add(" public");
-            if (m.stat) {
-              out.add(" static");
-            }
-            out.add(' function ${m.code}(${formatArgs(signatures[0])}):${validType(signatures[0].ret)};');
+        var mnames = [ for (k in intf.methods.keys()) k ];
+        mnames.sort(Reflect.compare);
+        for (mk in mnames) {
+          var m = intf.methods[mk];
+          if (m.stat && intf.isProtocol) {
+            continue;
           }
+          var signatures = getSuperMethods(m, m, intf);
+          for (i in 1...signatures.length) {
+            var s = signatures[i];
+            out.add("\n  @:overload(function(");
+            out.add(formatArgs(s));
+            out.add("):");
+            out.add(validType(s.ret));
+            out.add(" {})");
+          }
+          out.add("\n  ");
+          if (m.comment != null) {
+            out.add('/* ${m.comment} */ ');
+          }
+          out.add('@:native("${m.native}")');
+          if (signatures.length > 1) {
+            out.add(" override");
+          }
+          out.add(" public");
+          if (m.stat) {
+            out.add(" static");
+          }
+          out.add(' function ${mapKeywords(m.code)}(${formatArgs(signatures[0])}):${validType(signatures[0].ret)};');
         }
         if (intf.isStruct) {
           for (f in intf.fields) {
-            out.add('\n  public var ${f.name}:${validType(f.type)};');
+            out.add('\n  public var ${mapKeywords(f.name)}:${validType(f.type)};');
           }
         }
         out.add("\n}\n");
@@ -506,6 +560,7 @@ typedef Method = {
     ,args:Array<String>
     ,stat:Bool
     ,ret:String
+    ,?comment:String
   };
 
 typedef Field = {

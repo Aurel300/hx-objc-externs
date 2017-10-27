@@ -10,18 +10,18 @@ import haxe.Int64;
 extern class UIGravityBehavior
 extends UIDynamicBehavior
 {
-  @:native("items") public function items():Dynamic /*NSArray<id<UIDynamicItem>>*/;
-  @:native("gravityDirection") public function gravityDirection():CGVector;
-  @:native("angle") public function angle():Float;
-  @:native("magnitude") public function magnitude():Float;
-  @:native("setAngle:magnitude") public function setAngle_magnitude(angle:Float, magnitude:Float):Dynamic /*Void*/;
-  @:native("addItem") public function addItem(item:UIDynamicItem):Dynamic /*Void*/;
-  @:native("removeItem") public function removeItem(item:UIDynamicItem):Dynamic /*Void*/;
-  @:native("setGravityDirection") public function setGravityDirection(gravityDirection:CGVector):Dynamic /*Void*/;
-  @:native("setMagnitude") public function setMagnitude(magnitude:Float):Dynamic /*Void*/;
+  @:native("addItem") public function addItem(item:UIDynamicItem):Void;
   @:native("alloc") public static function alloc():UIGravityBehavior;
-  @:native("initWithItems") public function initWithItems(items:Dynamic /*NSArray<id<UIDynamicItem>>*/):UIGravityBehavior;
+  @:native("angle") public function angle():Float;
   @:overload(function():UIGravityBehavior {})
   @:native("autorelease") override public function autorelease():UIDynamicBehavior;
-  @:native("setAngle") public function setAngle(angle:Float):Dynamic /*Void*/;
+  @:native("gravityDirection") public function gravityDirection():CGVector;
+  @:native("initWithItems") public function initWithItems(items:Dynamic /*NSArray<id<UIDynamicItem>>*/):UIGravityBehavior;
+  @:native("items") public function items():Dynamic /*NSArray<id<UIDynamicItem>>*/;
+  @:native("magnitude") public function magnitude():Float;
+  @:native("removeItem") public function removeItem(item:UIDynamicItem):Void;
+  @:native("setAngle") public function setAngle(angle:Float):Void;
+  @:native("setAngle:magnitude") public function setAngle_magnitude(angle:Float, magnitude:Float):Void;
+  @:native("setGravityDirection") public function setGravityDirection(gravityDirection:CGVector):Void;
+  @:native("setMagnitude") public function setMagnitude(magnitude:Float):Void;
 }

@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGImagePropertyOrientation")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGImagePropertyOrientation(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract CGImagePropertyOrientation(UInt) from UInt to UInt
 {
 }

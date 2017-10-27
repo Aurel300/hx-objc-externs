@@ -10,58 +10,58 @@ import haxe.Int64;
 extern class NSMutableParagraphStyle
 extends NSParagraphStyle
 {
-  @:overload(function():Float {})
-  @:native("paragraphSpacing") override public function paragraphSpacing():Float;
+  @:native("addTabStop") public function addTabStop(anObject:NSTextTab):Void;
   @:overload(function():NSTextAlignment {})
   @:native("alignment") override public function alignment():NSTextAlignment;
-  @:native("setMaximumLineHeight") public function setMaximumLineHeight(maximumLineHeight:Float):Dynamic /*Void*/;
-  @:native("addTabStop") public function addTabStop(anObject:NSTextTab):Dynamic /*Void*/;
-  @:native("setBaseWritingDirection") public function setBaseWritingDirection(baseWritingDirection:NSWritingDirection):Dynamic /*Void*/;
-  @:native("setHyphenationFactor") public function setHyphenationFactor(hyphenationFactor:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("removeTabStop") public function removeTabStop(anObject:NSTextTab):Dynamic /*Void*/;
-  @:native("setTailIndent") public function setTailIndent(tailIndent:Float):Dynamic /*Void*/;
-  @:native("setLineHeightMultiple") public function setLineHeightMultiple(lineHeightMultiple:Float):Dynamic /*Void*/;
-  @:overload(function():Float {})
-  @:native("tailIndent") override public function tailIndent():Float;
+  @:native("alloc") public static function alloc():NSMutableParagraphStyle;
+  @:overload(function():Bool {})
+  @:native("allowsDefaultTighteningForTruncation") override public function allowsDefaultTighteningForTruncation():Bool;
+  @:overload(function():NSMutableParagraphStyle {})
+  @:native("autorelease") override public function autorelease():NSParagraphStyle;
   @:overload(function():NSWritingDirection {})
   @:native("baseWritingDirection") override public function baseWritingDirection():NSWritingDirection;
-  @:native("setParagraphStyle") public function setParagraphStyle(obj:NSParagraphStyle):Dynamic /*Void*/;
+  @:overload(function():Float {})
+  @:native("defaultTabInterval") override public function defaultTabInterval():Float;
   @:overload(function():Float {})
   @:native("firstLineHeadIndent") override public function firstLineHeadIndent():Float;
   @:overload(function():Float {})
-  @:native("lineSpacing") override public function lineSpacing():Float;
-  @:native("setLineSpacing") public function setLineSpacing(lineSpacing:Float):Dynamic /*Void*/;
+  @:native("headIndent") override public function headIndent():Float;
   @:overload(function():Float {})
-  @:native("maximumLineHeight") override public function maximumLineHeight():Float;
-  @:native("setDefaultTabInterval") public function setDefaultTabInterval(defaultTabInterval:Float):Dynamic /*Void*/;
-  @:native("setMinimumLineHeight") public function setMinimumLineHeight(minimumLineHeight:Float):Dynamic /*Void*/;
-  @:overload(function():Float {})
-  @:native("paragraphSpacingBefore") override public function paragraphSpacingBefore():Float;
-  @:native("setAlignment") public function setAlignment(alignment:NSTextAlignment):Dynamic /*Void*/;
-  @:native("setHeadIndent") public function setHeadIndent(headIndent:Float):Dynamic /*Void*/;
+  @:native("hyphenationFactor") override public function hyphenationFactor():Float;
   @:overload(function():NSLineBreakMode {})
   @:native("lineBreakMode") override public function lineBreakMode():NSLineBreakMode;
   @:overload(function():Float {})
   @:native("lineHeightMultiple") override public function lineHeightMultiple():Float;
-  @:native("setLineBreakMode") public function setLineBreakMode(lineBreakMode:NSLineBreakMode):Dynamic /*Void*/;
-  @:native("setParagraphSpacing") public function setParagraphSpacing(paragraphSpacing:Float):Dynamic /*Void*/;
   @:overload(function():Float {})
-  @:native("defaultTabInterval") override public function defaultTabInterval():Float;
-  @:native("setFirstLineHeadIndent") public function setFirstLineHeadIndent(firstLineHeadIndent:Float):Dynamic /*Void*/;
-  @:native("setParagraphSpacingBefore") public function setParagraphSpacingBefore(paragraphSpacingBefore:Float):Dynamic /*Void*/;
-  @:overload(function():Dynamic /*Float*/ {})
-  @:native("hyphenationFactor") override public function hyphenationFactor():Dynamic /*Float*/;
-  @:native("setTabStops") public function setTabStops(tabStops:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("lineSpacing") override public function lineSpacing():Float;
   @:overload(function():Float {})
-  @:native("headIndent") override public function headIndent():Float;
-  @:overload(function():Dynamic /*Dynamic*/ {})
-  @:native("tabStops") override public function tabStops():Dynamic /*Dynamic*/;
-  @:native("setAllowsDefaultTighteningForTruncation") public function setAllowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation:Dynamic /*Bool*/):Dynamic /*Void*/;
-  @:native("alloc") public static function alloc():NSMutableParagraphStyle;
+  @:native("maximumLineHeight") override public function maximumLineHeight():Float;
   @:overload(function():Float {})
   @:native("minimumLineHeight") override public function minimumLineHeight():Float;
-  @:overload(function():NSMutableParagraphStyle {})
-  @:native("autorelease") override public function autorelease():NSParagraphStyle;
-  @:overload(function():Dynamic /*Bool*/ {})
-  @:native("allowsDefaultTighteningForTruncation") override public function allowsDefaultTighteningForTruncation():Dynamic /*Bool*/;
+  @:overload(function():Float {})
+  @:native("paragraphSpacing") override public function paragraphSpacing():Float;
+  @:overload(function():Float {})
+  @:native("paragraphSpacingBefore") override public function paragraphSpacingBefore():Float;
+  @:native("removeTabStop") public function removeTabStop(anObject:NSTextTab):Void;
+  @:native("setAlignment") public function setAlignment(alignment:NSTextAlignment):Void;
+  @:native("setAllowsDefaultTighteningForTruncation") public function setAllowsDefaultTighteningForTruncation(allowsDefaultTighteningForTruncation:Bool):Void;
+  @:native("setBaseWritingDirection") public function setBaseWritingDirection(baseWritingDirection:NSWritingDirection):Void;
+  @:native("setDefaultTabInterval") public function setDefaultTabInterval(defaultTabInterval:Float):Void;
+  @:native("setFirstLineHeadIndent") public function setFirstLineHeadIndent(firstLineHeadIndent:Float):Void;
+  @:native("setHeadIndent") public function setHeadIndent(headIndent:Float):Void;
+  @:native("setHyphenationFactor") public function setHyphenationFactor(hyphenationFactor:Float):Void;
+  @:native("setLineBreakMode") public function setLineBreakMode(lineBreakMode:NSLineBreakMode):Void;
+  @:native("setLineHeightMultiple") public function setLineHeightMultiple(lineHeightMultiple:Float):Void;
+  @:native("setLineSpacing") public function setLineSpacing(lineSpacing:Float):Void;
+  @:native("setMaximumLineHeight") public function setMaximumLineHeight(maximumLineHeight:Float):Void;
+  @:native("setMinimumLineHeight") public function setMinimumLineHeight(minimumLineHeight:Float):Void;
+  @:native("setParagraphSpacing") public function setParagraphSpacing(paragraphSpacing:Float):Void;
+  @:native("setParagraphSpacingBefore") public function setParagraphSpacingBefore(paragraphSpacingBefore:Float):Void;
+  @:native("setParagraphStyle") public function setParagraphStyle(obj:NSParagraphStyle):Void;
+  @:native("setTabStops") public function setTabStops(tabStops:Dynamic):Void;
+  @:native("setTailIndent") public function setTailIndent(tailIndent:Float):Void;
+  @:overload(function():Dynamic {})
+  @:native("tabStops") override public function tabStops():Dynamic;
+  @:overload(function():Float {})
+  @:native("tailIndent") override public function tailIndent():Float;
 }

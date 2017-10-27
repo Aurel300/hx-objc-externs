@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGBitmapInfo")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGBitmapInfo(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract CGBitmapInfo(UInt) from UInt to UInt
 {
 }

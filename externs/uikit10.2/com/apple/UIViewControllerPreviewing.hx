@@ -9,4 +9,9 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIViewControllerPreviewing
 {
+  @:native("delegate") public function delegate():UIViewControllerPreviewingDelegate;
+  @:native("previewingGestureRecognizerForFailureRelationship") public function previewingGestureRecognizerForFailureRelationship():UIGestureRecognizer;
+  @:native("setSourceRect") public function setSourceRect(sourceRect:CGRect):Void;
+  @:native("sourceRect") public function sourceRect():CGRect;
+  @:native("sourceView") public function sourceView():UIView;
 }

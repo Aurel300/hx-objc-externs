@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSPortDelegate
 {
+  @:native("handlePortMessage") public function handlePortMessage(message:NSPortMessage):Void;
 }

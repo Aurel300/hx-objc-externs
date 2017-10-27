@@ -10,17 +10,17 @@ import haxe.Int64;
 extern class NSBundleResourceRequest
 implements cpp.objc.Protocol<NSProgressReporting>
 {
-  @:native("initWithTags") public function initWithTags(tags:Dynamic /*Dynamic*/):NSBundleResourceRequest;
-  @:native("endAccessingResources") public function endAccessingResources():Dynamic /*Void*/;
-  @:native("initWithTags:bundle") public function initWithTags_bundle(tags:Dynamic /*Dynamic*/, bundle:NSBundle):NSBundleResourceRequest;
-  @:native("loadingPriority") public function loadingPriority():Dynamic /*Float*/;
-  @:native("setLoadingPriority") public function setLoadingPriority(loadingPriority:Dynamic /*Float*/):Dynamic /*Void*/;
-  @:native("beginAccessingResourcesWithCompletionHandler") public function beginAccessingResourcesWithCompletionHandler(completionHandler:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("tags") public function tags():Dynamic /*Dynamic*/;
-  @:native("bundle") public function bundle():NSBundle;
   @:native("alloc") public static function alloc():NSBundleResourceRequest;
-  @:native("conditionallyBeginAccessingResourcesWithCompletionHandler") public function conditionallyBeginAccessingResourcesWithCompletionHandler(completionHandler:Dynamic /*Dynamic*/):Dynamic /*Void*/;
-  @:native("progress") public function progress():NSProgress;
   @:native("autorelease") public function autorelease():NSBundleResourceRequest;
+  @:native("beginAccessingResourcesWithCompletionHandler") public function beginAccessingResourcesWithCompletionHandler(completionHandler:Dynamic):Void;
+  @:native("bundle") public function bundle():NSBundle;
+  @:native("conditionallyBeginAccessingResourcesWithCompletionHandler") public function conditionallyBeginAccessingResourcesWithCompletionHandler(completionHandler:Dynamic):Void;
+  @:native("endAccessingResources") public function endAccessingResources():Void;
   @:native("init") public function init():NSBundleResourceRequest;
+  @:native("initWithTags") public function initWithTags(tags:Dynamic):NSBundleResourceRequest;
+  @:native("initWithTags:bundle") public function initWithTags_bundle(tags:Dynamic, bundle:NSBundle):NSBundleResourceRequest;
+  @:native("loadingPriority") public function loadingPriority():Float;
+  @:native("progress") public function progress():NSProgress;
+  @:native("setLoadingPriority") public function setLoadingPriority(loadingPriority:Float):Void;
+  @:native("tags") public function tags():Dynamic;
 }

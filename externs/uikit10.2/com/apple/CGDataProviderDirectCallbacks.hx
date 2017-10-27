@@ -11,7 +11,7 @@ extern class CGDataProviderDirectCallbacks
 {
   public var getBytePointer:Dynamic;
   public var releaseBytePointer:Dynamic;
-  public var version:Dynamic /*Int*/;
+  public var version:Int;
   public var getBytesAtPosition:Dynamic;
   public var releaseInfo:Dynamic;
 }

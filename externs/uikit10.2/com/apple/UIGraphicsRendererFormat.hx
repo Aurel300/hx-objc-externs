@@ -10,8 +10,9 @@ import haxe.Int64;
 extern class UIGraphicsRendererFormat
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("bounds") public function bounds():CGRect;
   @:native("alloc") public static function alloc():UIGraphicsRendererFormat;
-  @:native("defaultFormat") public static function defaultFormat():UIGraphicsRendererFormat;
   @:native("autorelease") public function autorelease():UIGraphicsRendererFormat;
+  @:native("bounds") public function bounds():CGRect;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("defaultFormat") public static function defaultFormat():UIGraphicsRendererFormat;
 }

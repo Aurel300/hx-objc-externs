@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIInputViewAudioFeedback
 {
+  @:native("enableInputClicksWhenVisible") public function enableInputClicksWhenVisible():Bool;
 }

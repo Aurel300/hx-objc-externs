@@ -10,13 +10,13 @@ import haxe.Int64;
 extern class UIGraphicsImageRendererFormat
 extends UIGraphicsRendererFormat
 {
-  @:native("opaque") public function opaque():Dynamic /*Bool*/;
-  @:native("setScale") public function setScale(scale:Float):Dynamic /*Void*/;
-  @:native("setOpaque") public function setOpaque(opaque:Dynamic /*Bool*/):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIGraphicsImageRendererFormat;
-  @:native("prefersExtendedRange") public function prefersExtendedRange():Dynamic /*Bool*/;
-  @:native("setPrefersExtendedRange") public function setPrefersExtendedRange(prefersExtendedRange:Dynamic /*Bool*/):Dynamic /*Void*/;
   @:overload(function():UIGraphicsImageRendererFormat {})
   @:native("autorelease") override public function autorelease():UIGraphicsRendererFormat;
+  @:native("opaque") public function opaque():Bool;
+  @:native("prefersExtendedRange") public function prefersExtendedRange():Bool;
   @:native("scale") public function scale():Float;
+  @:native("setOpaque") public function setOpaque(opaque:Bool):Void;
+  @:native("setPrefersExtendedRange") public function setPrefersExtendedRange(prefersExtendedRange:Bool):Void;
+  @:native("setScale") public function setScale(scale:Float):Void;
 }

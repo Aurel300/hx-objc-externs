@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UITraitEnvironment
 {
+  @:native("traitCollection") public function traitCollection():UITraitCollection;
+  @:native("traitCollectionDidChange") public function traitCollectionDidChange(previousTraitCollection:UITraitCollection):Void;
 }

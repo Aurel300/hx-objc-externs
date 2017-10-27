@@ -13,5 +13,5 @@ extends UIFeedbackGenerator
   @:native("alloc") public static function alloc():UINotificationFeedbackGenerator;
   @:overload(function():UINotificationFeedbackGenerator {})
   @:native("autorelease") override public function autorelease():UIFeedbackGenerator;
-  @:native("notificationOccurred") public function notificationOccurred(notificationType:UINotificationFeedbackType):Dynamic /*Void*/;
+  @:native("notificationOccurred") public function notificationOccurred(notificationType:UINotificationFeedbackType):Void;
 }

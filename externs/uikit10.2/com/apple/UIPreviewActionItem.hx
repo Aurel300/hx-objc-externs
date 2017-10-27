@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIPreviewActionItem
 {
+  @:native("title") public function title():NSString;
 }

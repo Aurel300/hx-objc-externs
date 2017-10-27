@@ -9,8 +9,8 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UIDictationPhrase
 {
-  @:native("text") public function text():NSString;
-  @:native("alternativeInterpretations") public function alternativeInterpretations():Dynamic /*Dynamic*/;
   @:native("alloc") public static function alloc():UIDictationPhrase;
+  @:native("alternativeInterpretations") public function alternativeInterpretations():Dynamic;
   @:native("autorelease") public function autorelease():UIDictationPhrase;
+  @:native("text") public function text():NSString;
 }

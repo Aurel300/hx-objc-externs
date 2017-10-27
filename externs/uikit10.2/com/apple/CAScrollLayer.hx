@@ -10,11 +10,11 @@ import haxe.Int64;
 extern class CAScrollLayer
 extends CALayer
 {
-  @:native("scrollMode") public function scrollMode():NSString;
-  @:native("scrollToPoint") public function scrollToPoint(p:CGPoint):Dynamic /*Void*/;
-  @:native("setScrollMode") public function setScrollMode(scrollMode:NSString):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():CAScrollLayer;
   @:overload(function():CAScrollLayer {})
   @:native("autorelease") override public function autorelease():CALayer;
-  @:native("scrollToRect") public function scrollToRect(r:CGRect):Dynamic /*Void*/;
+  @:native("scrollMode") public function scrollMode():NSString;
+  @:native("scrollToPoint") public function scrollToPoint(p:CGPoint):Void;
+  @:native("scrollToRect") public function scrollToRect(r:CGRect):Void;
+  @:native("setScrollMode") public function setScrollMode(scrollMode:NSString):Void;
 }

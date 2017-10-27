@@ -10,10 +10,10 @@ import haxe.Int64;
 extern class NSBlockOperation
 extends NSOperation
 {
-  @:native("executionBlocks") public function executionBlocks():Dynamic /*Dynamic*/;
-  @:native("blockOperationWithBlock") public static function blockOperationWithBlock(block:Dynamic /*Dynamic*/):NSBlockOperation;
+  @:native("addExecutionBlock") public function addExecutionBlock(block:Dynamic):Void;
   @:native("alloc") public static function alloc():NSBlockOperation;
   @:overload(function():NSBlockOperation {})
   @:native("autorelease") override public function autorelease():NSOperation;
-  @:native("addExecutionBlock") public function addExecutionBlock(block:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("blockOperationWithBlock") public static function blockOperationWithBlock(block:Dynamic):NSBlockOperation;
+  @:native("executionBlocks") public function executionBlocks():Dynamic;
 }

@@ -11,7 +11,7 @@ extern class CGDataProviderSequentialCallbacks
 {
   public var skipForward:Dynamic;
   public var rewind:Dynamic;
-  public var version:Dynamic /*Int*/;
+  public var version:Int;
   public var getBytes:Dynamic;
   public var releaseInfo:Dynamic;
 }

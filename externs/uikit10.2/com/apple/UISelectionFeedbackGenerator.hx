@@ -13,5 +13,5 @@ extends UIFeedbackGenerator
   @:native("alloc") public static function alloc():UISelectionFeedbackGenerator;
   @:overload(function():UISelectionFeedbackGenerator {})
   @:native("autorelease") override public function autorelease():UIFeedbackGenerator;
-  @:native("selectionChanged") public function selectionChanged():Dynamic /*Void*/;
+  @:native("selectionChanged") public function selectionChanged():Void;
 }

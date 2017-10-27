@@ -10,21 +10,21 @@ import haxe.Int64;
 extern class NSDateIntervalFormatter
 extends NSFormatter
 {
-  @:native("timeZone") public function timeZone():NSTimeZone;
-  @:native("stringFromDate:toDate") public function stringFromDate_toDate(fromDate:NSDate, toDate:NSDate):NSString;
-  @:native("setDateTemplate") public function setDateTemplate(dateTemplate:NSString):Dynamic /*Void*/;
-  @:native("dateTemplate") public function dateTemplate():NSString;
-  @:native("calendar") public function calendar():NSCalendar;
-  @:native("timeStyle") public function timeStyle():NSDateIntervalFormatterStyle;
-  @:native("setTimeZone") public function setTimeZone(timeZone:NSTimeZone):Dynamic /*Void*/;
-  @:native("setDateStyle") public function setDateStyle(dateStyle:NSDateIntervalFormatterStyle):Dynamic /*Void*/;
-  @:native("stringFromDateInterval") public function stringFromDateInterval(dateInterval:NSDateInterval):NSString;
-  @:native("locale") public function locale():NSLocale;
-  @:native("setCalendar") public function setCalendar(calendar:NSCalendar):Dynamic /*Void*/;
-  @:native("setLocale") public function setLocale(locale:NSLocale):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSDateIntervalFormatter;
-  @:native("dateStyle") public function dateStyle():NSDateIntervalFormatterStyle;
   @:overload(function():NSDateIntervalFormatter {})
   @:native("autorelease") override public function autorelease():NSFormatter;
-  @:native("setTimeStyle") public function setTimeStyle(timeStyle:NSDateIntervalFormatterStyle):Dynamic /*Void*/;
+  @:native("calendar") public function calendar():NSCalendar;
+  @:native("dateStyle") public function dateStyle():NSDateIntervalFormatterStyle;
+  @:native("dateTemplate") public function dateTemplate():NSString;
+  @:native("locale") public function locale():NSLocale;
+  @:native("setCalendar") public function setCalendar(calendar:NSCalendar):Void;
+  @:native("setDateStyle") public function setDateStyle(dateStyle:NSDateIntervalFormatterStyle):Void;
+  @:native("setDateTemplate") public function setDateTemplate(dateTemplate:NSString):Void;
+  @:native("setLocale") public function setLocale(locale:NSLocale):Void;
+  @:native("setTimeStyle") public function setTimeStyle(timeStyle:NSDateIntervalFormatterStyle):Void;
+  @:native("setTimeZone") public function setTimeZone(timeZone:NSTimeZone):Void;
+  @:native("stringFromDate:toDate") public function stringFromDate_toDate(fromDate:NSDate, toDate:NSDate):NSString;
+  @:native("stringFromDateInterval") public function stringFromDateInterval(dateInterval:NSDateInterval):NSString;
+  @:native("timeStyle") public function timeStyle():NSDateIntervalFormatterStyle;
+  @:native("timeZone") public function timeZone():NSTimeZone;
 }

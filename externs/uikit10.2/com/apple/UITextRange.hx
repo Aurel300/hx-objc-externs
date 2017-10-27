@@ -9,9 +9,9 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UITextRange
 {
-  @:native("start") public function start():UITextPosition;
-  @:native("isEmpty") public function isEmpty():Dynamic /*Bool*/;
   @:native("alloc") public static function alloc():UITextRange;
-  @:native("end") public function end():UITextPosition;
   @:native("autorelease") public function autorelease():UITextRange;
+  @:native("end") public function end():UITextPosition;
+  @:native("isEmpty") public function isEmpty():Bool;
+  @:native("start") public function start():UITextPosition;
 }

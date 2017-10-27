@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGColorSpaceModel")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGColorSpaceModel(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGColorSpaceModel(Int) from Int to Int
 {
 }

@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGImageMetadataType")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGImageMetadataType(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGImageMetadataType(Int) from Int to Int
 {
 }

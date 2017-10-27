@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSExtensionRequestHandling
 {
+  @:native("beginRequestWithExtensionContext") public function beginRequestWithExtensionContext(context:NSExtensionContext):Void;
 }

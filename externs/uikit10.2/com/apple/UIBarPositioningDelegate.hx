@@ -9,4 +9,5 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIBarPositioningDelegate
 {
+  @:native("positionForBar") public function positionForBar(bar:UIBarPositioning):UIBarPosition;
 }

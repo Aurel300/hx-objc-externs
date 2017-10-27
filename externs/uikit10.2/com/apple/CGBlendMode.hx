@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGBlendMode")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGBlendMode(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGBlendMode(Int) from Int to Int
 {
 }

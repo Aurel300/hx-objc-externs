@@ -10,10 +10,12 @@ import haxe.Int64;
 extern class CAMediaTimingFunction
 implements cpp.objc.Protocol<NSCoding>
 {
-  @:native("initWithControlPoints") public function initWithControlPoints(c1x:Dynamic /*Float*/, c1y:Dynamic /*Float*/, c2x:Dynamic /*Float*/, c2y:Dynamic /*Float*/):CAMediaTimingFunction;
-  @:native("functionWithControlPoints") public static function functionWithControlPoints(c1x:Dynamic /*Float*/, c1y:Dynamic /*Float*/, c2x:Dynamic /*Float*/, c2y:Dynamic /*Float*/):CAMediaTimingFunction;
-  @:native("getControlPointAtIndex:values") public function getControlPointAtIndex_values(idx:Dynamic /*Int*/, ptr:Dynamic /*Float*/):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():CAMediaTimingFunction;
-  @:native("functionWithName") public static function functionWithName(name:NSString):CAMediaTimingFunction;
   @:native("autorelease") public function autorelease():CAMediaTimingFunction;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("functionWithControlPoints") public static function functionWithControlPoints(c1x:Float, c1y:Float, c2x:Float, c2y:Float):CAMediaTimingFunction;
+  @:native("functionWithName") public static function functionWithName(name:NSString):CAMediaTimingFunction;
+  @:native("getControlPointAtIndex:values") public function getControlPointAtIndex_values(idx:Int, ptr:Float):Void;
+  /* Implicit from NSCoding */ @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  @:native("initWithControlPoints") public function initWithControlPoints(c1x:Float, c1y:Float, c2x:Float, c2y:Float):CAMediaTimingFunction;
 }

@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIViewControllerPreviewingDelegate
 {
+  @:native("previewingContext:commitViewController") public function previewingContext_commitViewController(previewingContext:UIViewControllerPreviewing, viewControllerToCommit:UIViewController):Void;
+  @:native("previewingContext:viewControllerForLocation") public function previewingContext_viewControllerForLocation(previewingContext:UIViewControllerPreviewing, location:CGPoint):UIViewController;
 }

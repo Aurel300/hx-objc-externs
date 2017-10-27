@@ -9,4 +9,18 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UISplitViewControllerDelegate
 {
+  @:native("primaryViewControllerForCollapsingSplitViewController") public function primaryViewControllerForCollapsingSplitViewController(splitViewController:UISplitViewController):UIViewController;
+  @:native("primaryViewControllerForExpandingSplitViewController") public function primaryViewControllerForExpandingSplitViewController(splitViewController:UISplitViewController):UIViewController;
+  @:native("splitViewController:collapseSecondaryViewController:ontoPrimaryViewController") public function splitViewController_collapseSecondaryViewController_ontoPrimaryViewController(splitViewController:UISplitViewController, secondaryViewController:UIViewController, primaryViewController:UIViewController):Bool;
+  @:native("splitViewController:popoverController:willPresentViewController") public function splitViewController_popoverController_willPresentViewController(svc:UISplitViewController, pc:UIPopoverController, aViewController:UIViewController):Void;
+  @:native("splitViewController:separateSecondaryViewControllerFromPrimaryViewController") public function splitViewController_separateSecondaryViewControllerFromPrimaryViewController(splitViewController:UISplitViewController, primaryViewController:UIViewController):UIViewController;
+  @:native("splitViewController:shouldHideViewController:inOrientation") public function splitViewController_shouldHideViewController_inOrientation(svc:UISplitViewController, vc:UIViewController, orientation:UIInterfaceOrientation):Bool;
+  @:native("splitViewController:showDetailViewController:sender") public function splitViewController_showDetailViewController_sender(splitViewController:UISplitViewController, vc:UIViewController, sender:Dynamic):Bool;
+  @:native("splitViewController:showViewController:sender") public function splitViewController_showViewController_sender(splitViewController:UISplitViewController, vc:UIViewController, sender:Dynamic):Bool;
+  @:native("splitViewController:willChangeToDisplayMode") public function splitViewController_willChangeToDisplayMode(svc:UISplitViewController, displayMode:UISplitViewControllerDisplayMode):Void;
+  @:native("splitViewController:willHideViewController:withBarButtonItem:forPopoverController") public function splitViewController_willHideViewController_withBarButtonItem_forPopoverController(svc:UISplitViewController, aViewController:UIViewController, barButtonItem:UIBarButtonItem, pc:UIPopoverController):Void;
+  @:native("splitViewController:willShowViewController:invalidatingBarButtonItem") public function splitViewController_willShowViewController_invalidatingBarButtonItem(svc:UISplitViewController, aViewController:UIViewController, barButtonItem:UIBarButtonItem):Void;
+  @:native("splitViewControllerPreferredInterfaceOrientationForPresentation") public function splitViewControllerPreferredInterfaceOrientationForPresentation(splitViewController:UISplitViewController):UIInterfaceOrientation;
+  @:native("splitViewControllerSupportedInterfaceOrientations") public function splitViewControllerSupportedInterfaceOrientations(splitViewController:UISplitViewController):UIInterfaceOrientationMask;
+  @:native("targetDisplayModeForActionInSplitViewController") public function targetDisplayModeForActionInSplitViewController(svc:UISplitViewController):UISplitViewControllerDisplayMode;
 }

@@ -10,4 +10,6 @@ import haxe.Int64;
 extern interface UIPickerViewAccessibilityDelegate
 extends cpp.objc.Protocol<UIPickerViewDelegate>
 {
+  @:native("pickerView:accessibilityHintForComponent") public function pickerView_accessibilityHintForComponent(pickerView:UIPickerView, component:Int):NSString;
+  @:native("pickerView:accessibilityLabelForComponent") public function pickerView_accessibilityLabelForComponent(pickerView:UIPickerView, component:Int):NSString;
 }

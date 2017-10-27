@@ -11,11 +11,11 @@ extern class NSUnitFuelEfficiency
 extends NSDimension
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("litersPer100Kilometers") public static function litersPer100Kilometers():NSUnitFuelEfficiency;
-  @:native("milesPerGallon") public static function milesPerGallon():NSUnitFuelEfficiency;
-  @:native("milesPerImperialGallon") public static function milesPerImperialGallon():NSUnitFuelEfficiency;
   @:native("alloc") public static function alloc():NSUnitFuelEfficiency;
   @:overload(function():NSDimension {})
   @:overload(function():NSUnitFuelEfficiency {})
   @:native("autorelease") override public function autorelease():NSUnit;
+  @:native("litersPer100Kilometers") public static function litersPer100Kilometers():NSUnitFuelEfficiency;
+  @:native("milesPerGallon") public static function milesPerGallon():NSUnitFuelEfficiency;
+  @:native("milesPerImperialGallon") public static function milesPerImperialGallon():NSUnitFuelEfficiency;
 }

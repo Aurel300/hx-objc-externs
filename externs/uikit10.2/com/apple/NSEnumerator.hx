@@ -10,8 +10,9 @@ import haxe.Int64;
 extern class NSEnumerator
 implements cpp.objc.Protocol<NSFastEnumeration>
 {
-  @:native("nextObject") public function nextObject():Dynamic /*ObjectType*/;
-  @:native("alloc") public static function alloc():NSEnumerator;
   @:native("allObjects") public function allObjects():Dynamic /*NSArray<ObjectType>*/;
+  @:native("alloc") public static function alloc():NSEnumerator;
   @:native("autorelease") public function autorelease():NSEnumerator;
+  /* Implicit from NSFastEnumeration */ @:native("countByEnumeratingWithState:objects:count") public function countByEnumeratingWithState_objects_count(state:Dynamic /*NSFastEnumerationState*/, buffer:Dynamic, len:Int):Int;
+  @:native("nextObject") public function nextObject():Dynamic /*ObjectType*/;
 }

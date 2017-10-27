@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGImageSourceStatus")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGImageSourceStatus(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGImageSourceStatus(Int) from Int to Int
 {
 }

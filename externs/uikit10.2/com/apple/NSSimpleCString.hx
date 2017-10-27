@@ -8,9 +8,7 @@ import haxe.Int64;
 @:native("NSSimpleCString")
 @:include("UIKit/UIKit.h")
 extern class NSSimpleCString
-extends NSString
 {
   @:native("alloc") public static function alloc():NSSimpleCString;
-  @:overload(function():NSSimpleCString {})
-  @:native("autorelease") override public function autorelease():NSString;
+  @:native("autorelease") public function autorelease():NSSimpleCString;
 }

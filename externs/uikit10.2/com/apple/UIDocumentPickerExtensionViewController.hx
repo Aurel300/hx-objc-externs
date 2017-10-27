@@ -10,15 +10,15 @@ import haxe.Int64;
 extern class UIDocumentPickerExtensionViewController
 extends UIViewController
 {
-  @:native("documentPickerMode") public function documentPickerMode():UIDocumentPickerMode;
-  @:native("providerIdentifier") public function providerIdentifier():NSString;
-  @:native("validTypes") public function validTypes():Dynamic /*Dynamic*/;
-  @:native("dismissGrantingAccessToURL") public function dismissGrantingAccessToURL(url:NSURL):Dynamic /*Void*/;
-  @:native("prepareForPresentationInMode") public function prepareForPresentationInMode(mode:UIDocumentPickerMode):Dynamic /*Void*/;
-  @:native("documentStorageURL") public function documentStorageURL():NSURL;
   @:native("alloc") public static function alloc():UIDocumentPickerExtensionViewController;
   @:overload(function():UIViewController {})
   @:overload(function():UIDocumentPickerExtensionViewController {})
   @:native("autorelease") override public function autorelease():UIResponder;
+  @:native("dismissGrantingAccessToURL") public function dismissGrantingAccessToURL(url:NSURL):Void;
+  @:native("documentPickerMode") public function documentPickerMode():UIDocumentPickerMode;
+  @:native("documentStorageURL") public function documentStorageURL():NSURL;
   @:native("originalURL") public function originalURL():NSURL;
+  @:native("prepareForPresentationInMode") public function prepareForPresentationInMode(mode:UIDocumentPickerMode):Void;
+  @:native("providerIdentifier") public function providerIdentifier():NSString;
+  @:native("validTypes") public function validTypes():Dynamic;
 }

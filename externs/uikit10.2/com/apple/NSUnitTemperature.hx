@@ -11,11 +11,17 @@ extern class NSUnitTemperature
 extends NSDimension
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("kelvin") public static function kelvin():NSUnitTemperature;
-  @:native("celsius") public static function celsius():NSUnitTemperature;
-  @:native("fahrenheit") public static function fahrenheit():NSUnitTemperature;
   @:native("alloc") public static function alloc():NSUnitTemperature;
   @:overload(function():NSDimension {})
   @:overload(function():NSUnitTemperature {})
   @:native("autorelease") override public function autorelease():NSUnit;
+  @:native("celsius") public static function celsius():NSUnitTemperature;
+  @:overload(function(aCoder:NSCoder):Void {})
+  @:overload(function(aCoder:NSCoder):Void {})
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") override public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("fahrenheit") public static function fahrenheit():NSUnitTemperature;
+  @:overload(function(aDecoder:NSCoder):NSCoding {})
+  @:overload(function(aDecoder:NSCoder):NSCoding {})
+  /* Implicit from NSCoding */ @:native("initWithCoder") override public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  @:native("kelvin") public static function kelvin():NSUnitTemperature;
 }

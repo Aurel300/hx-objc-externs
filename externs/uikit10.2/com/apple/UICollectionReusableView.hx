@@ -10,14 +10,14 @@ import haxe.Int64;
 extern class UICollectionReusableView
 extends UIView
 {
-  @:native("prepareForReuse") public function prepareForReuse():Dynamic /*Void*/;
-  @:native("applyLayoutAttributes") public function applyLayoutAttributes(layoutAttributes:UICollectionViewLayoutAttributes):Dynamic /*Void*/;
-  @:native("didTransitionFromLayout:toLayout") public function didTransitionFromLayout_toLayout(oldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UICollectionReusableView;
-  @:native("willTransitionFromLayout:toLayout") public function willTransitionFromLayout_toLayout(oldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):Dynamic /*Void*/;
-  @:native("preferredLayoutAttributesFittingAttributes") public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes;
-  @:native("reuseIdentifier") public function reuseIdentifier():NSString;
+  @:native("applyLayoutAttributes") public function applyLayoutAttributes(layoutAttributes:UICollectionViewLayoutAttributes):Void;
   @:overload(function():UIView {})
   @:overload(function():UICollectionReusableView {})
   @:native("autorelease") override public function autorelease():UIResponder;
+  @:native("didTransitionFromLayout:toLayout") public function didTransitionFromLayout_toLayout(oldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):Void;
+  @:native("preferredLayoutAttributesFittingAttributes") public function preferredLayoutAttributesFittingAttributes(layoutAttributes:UICollectionViewLayoutAttributes):UICollectionViewLayoutAttributes;
+  @:native("prepareForReuse") public function prepareForReuse():Void;
+  @:native("reuseIdentifier") public function reuseIdentifier():NSString;
+  @:native("willTransitionFromLayout:toLayout") public function willTransitionFromLayout_toLayout(oldLayout:UICollectionViewLayout, newLayout:UICollectionViewLayout):Void;
 }

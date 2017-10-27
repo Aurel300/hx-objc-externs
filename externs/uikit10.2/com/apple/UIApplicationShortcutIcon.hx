@@ -10,8 +10,9 @@ import haxe.Int64;
 extern class UIApplicationShortcutIcon
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("iconWithType") public static function iconWithType(type:UIApplicationShortcutIconType):UIApplicationShortcutIcon;
-  @:native("iconWithTemplateImageName") public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutIcon;
   @:native("alloc") public static function alloc():UIApplicationShortcutIcon;
   @:native("autorelease") public function autorelease():UIApplicationShortcutIcon;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("iconWithTemplateImageName") public static function iconWithTemplateImageName(templateImageName:NSString):UIApplicationShortcutIcon;
+  @:native("iconWithType") public static function iconWithType(type:UIApplicationShortcutIconType):UIApplicationShortcutIcon;
 }

@@ -11,12 +11,12 @@ extern class NSUnitSpeed
 extends NSDimension
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("knots") public static function knots():NSUnitSpeed;
-  @:native("milesPerHour") public static function milesPerHour():NSUnitSpeed;
   @:native("alloc") public static function alloc():NSUnitSpeed;
-  @:native("kilometersPerHour") public static function kilometersPerHour():NSUnitSpeed;
   @:overload(function():NSDimension {})
   @:overload(function():NSUnitSpeed {})
   @:native("autorelease") override public function autorelease():NSUnit;
+  @:native("kilometersPerHour") public static function kilometersPerHour():NSUnitSpeed;
+  @:native("knots") public static function knots():NSUnitSpeed;
   @:native("metersPerSecond") public static function metersPerSecond():NSUnitSpeed;
+  @:native("milesPerHour") public static function milesPerHour():NSUnitSpeed;
 }

@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGTextDrawingMode")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGTextDrawingMode(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGTextDrawingMode(Int) from Int to Int
 {
 }

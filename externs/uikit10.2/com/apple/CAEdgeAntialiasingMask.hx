@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CAEdgeAntialiasingMask")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CAEdgeAntialiasingMask(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CAEdgeAntialiasingMask(Int) from Int to Int
 {
 }

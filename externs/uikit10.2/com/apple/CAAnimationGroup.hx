@@ -10,9 +10,9 @@ import haxe.Int64;
 extern class CAAnimationGroup
 extends CAAnimation
 {
-  @:native("animations") public function animations():Dynamic /*Dynamic*/;
   @:native("alloc") public static function alloc():CAAnimationGroup;
+  @:native("animations") public function animations():Dynamic;
   @:overload(function():CAAnimationGroup {})
   @:native("autorelease") override public function autorelease():CAAnimation;
-  @:native("setAnimations") public function setAnimations(animations:Dynamic /*Dynamic*/):Dynamic /*Void*/;
+  @:native("setAnimations") public function setAnimations(animations:Dynamic):Void;
 }

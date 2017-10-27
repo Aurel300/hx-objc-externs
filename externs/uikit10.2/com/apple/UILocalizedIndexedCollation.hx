@@ -9,12 +9,12 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class UILocalizedIndexedCollation
 {
-  @:native("sectionForObject:collationStringSelector") public function sectionForObject_collationStringSelector(object:Dynamic /*Dynamic*/, selector:Dynamic /*String*/):Int;
-  @:native("sectionTitles") public function sectionTitles():Dynamic /*Dynamic*/;
-  @:native("sectionIndexTitles") public function sectionIndexTitles():Dynamic /*Dynamic*/;
-  @:native("currentCollation") public static function currentCollation():UILocalizedIndexedCollation;
-  @:native("sortedArrayFromArray:collationStringSelector") public function sortedArrayFromArray_collationStringSelector(array:NSArray, selector:Dynamic /*String*/):NSArray;
   @:native("alloc") public static function alloc():UILocalizedIndexedCollation;
   @:native("autorelease") public function autorelease():UILocalizedIndexedCollation;
+  @:native("currentCollation") public static function currentCollation():UILocalizedIndexedCollation;
+  @:native("sectionForObject:collationStringSelector") public function sectionForObject_collationStringSelector(object:Dynamic, selector:String):Int;
   @:native("sectionForSectionIndexTitleAtIndex") public function sectionForSectionIndexTitleAtIndex(indexTitleIndex:Int):Int;
+  @:native("sectionIndexTitles") public function sectionIndexTitles():Dynamic;
+  @:native("sectionTitles") public function sectionTitles():Dynamic;
+  @:native("sortedArrayFromArray:collationStringSelector") public function sortedArrayFromArray_collationStringSelector(array:NSArray, selector:String):NSArray;
 }

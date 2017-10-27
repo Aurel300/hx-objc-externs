@@ -7,7 +7,7 @@ import haxe.Int64;
 @:native("NSActivityOptions")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract NSActivityOptions(Dynamic /*Dynamic*/) from Dynamic /*Dynamic*/ to Dynamic /*Dynamic*/
+extern abstract NSActivityOptions(Dynamic) from Dynamic to Dynamic
 {
   @:native("NSActivityIdleDisplaySleepDisabled") var NSActivityIdleDisplaySleepDisabled;
   @:native("NSActivityIdleSystemSleepDisabled") var NSActivityIdleSystemSleepDisabled;

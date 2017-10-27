@@ -10,14 +10,15 @@ import haxe.Int64;
 extern class NSCompoundPredicate
 extends NSPredicate
 {
-  @:native("subpredicates") public function subpredicates():NSArray;
-  @:native("notPredicateWithSubpredicate") public static function notPredicateWithSubpredicate(predicate:NSPredicate):NSCompoundPredicate;
-  @:native("initWithType:subpredicates") public function initWithType_subpredicates(type:NSCompoundPredicateType, subpredicates:Dynamic /*Dynamic*/):NSCompoundPredicate;
-  @:native("andPredicateWithSubpredicates") public static function andPredicateWithSubpredicates(subpredicates:Dynamic /*Dynamic*/):NSCompoundPredicate;
-  @:native("compoundPredicateType") public function compoundPredicateType():NSCompoundPredicateType;
-  @:native("orPredicateWithSubpredicates") public static function orPredicateWithSubpredicates(subpredicates:Dynamic /*Dynamic*/):NSCompoundPredicate;
   @:native("alloc") public static function alloc():NSCompoundPredicate;
+  @:native("andPredicateWithSubpredicates") public static function andPredicateWithSubpredicates(subpredicates:Dynamic):NSCompoundPredicate;
   @:overload(function():NSCompoundPredicate {})
   @:native("autorelease") override public function autorelease():NSPredicate;
-  @:native("initWithCoder") public function initWithCoder(coder:NSCoder):NSCompoundPredicate;
+  @:native("compoundPredicateType") public function compoundPredicateType():NSCompoundPredicateType;
+  @:overload(function(coder:NSCoder):NSCompoundPredicate {})
+  @:native("initWithCoder") override public function initWithCoder(aDecoder:NSCoder):NSCoding;
+  @:native("initWithType:subpredicates") public function initWithType_subpredicates(type:NSCompoundPredicateType, subpredicates:Dynamic):NSCompoundPredicate;
+  @:native("notPredicateWithSubpredicate") public static function notPredicateWithSubpredicate(predicate:NSPredicate):NSCompoundPredicate;
+  @:native("orPredicateWithSubpredicates") public static function orPredicateWithSubpredicates(subpredicates:Dynamic):NSCompoundPredicate;
+  @:native("subpredicates") public function subpredicates():NSArray;
 }

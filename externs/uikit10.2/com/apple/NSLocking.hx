@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface NSLocking
 {
+  @:native("lock") public function lock():Void;
+  @:native("unlock") public function unlock():Void;
 }

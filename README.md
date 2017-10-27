@@ -9,11 +9,13 @@ This is a [Haxe](http://www.haxe.org/) `extern` generator for Objective-C classe
    - [x] Static methods
    - [ ] Properties (getters and setters are methods, so using the methods still works)
  - [x] Protocols (-> Haxe interfaces)
+   - [x] Instance methods (implicitly also declared on implementing classes, even when not present)
  - [x] Records / structs (-> Haxe classes with `@:structAccess`)
    - [x] Member fields
  - [x] Enums
  - [x] Global functions
  - [ ] Better integration with `cpp.objc.*` types (currently only `NSString` and `NSDictionary` are used)
+ - [ ] Type parameters
 
 ## Generated externs ##
 

@@ -9,4 +9,6 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern interface UIDocumentPickerDelegate
 {
+  @:native("documentPicker:didPickDocumentAtURL") public function documentPicker_didPickDocumentAtURL(controller:UIDocumentPickerViewController, url:NSURL):Void;
+  @:native("documentPickerWasCancelled") public function documentPickerWasCancelled(controller:UIDocumentPickerViewController):Void;
 }

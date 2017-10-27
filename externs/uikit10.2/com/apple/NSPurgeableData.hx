@@ -15,4 +15,8 @@ implements cpp.objc.Protocol<NSDiscardableContent>
   @:overload(function():NSMutableData {})
   @:overload(function():NSPurgeableData {})
   @:native("autorelease") override public function autorelease():NSData;
+  /* Implicit from NSDiscardableContent */ @:native("beginContentAccess") public function beginContentAccess():Bool;
+  /* Implicit from NSDiscardableContent */ @:native("discardContentIfPossible") public function discardContentIfPossible():Void;
+  /* Implicit from NSDiscardableContent */ @:native("endContentAccess") public function endContentAccess():Void;
+  /* Implicit from NSDiscardableContent */ @:native("isContentDiscarded") public function isContentDiscarded():Bool;
 }

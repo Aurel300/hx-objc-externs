@@ -10,8 +10,9 @@ import haxe.Int64;
 extern class UILexiconEntry
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("documentText") public function documentText():NSString;
-  @:native("userInput") public function userInput():NSString;
   @:native("alloc") public static function alloc():UILexiconEntry;
   @:native("autorelease") public function autorelease():UILexiconEntry;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("documentText") public function documentText():NSString;
+  @:native("userInput") public function userInput():NSString;
 }

@@ -11,9 +11,9 @@ extern class UIScreenEdgePanGestureRecognizer
 extends UIPanGestureRecognizer
 {
   @:native("alloc") public static function alloc():UIScreenEdgePanGestureRecognizer;
-  @:native("edges") public function edges():UIRectEdge;
   @:overload(function():UIPanGestureRecognizer {})
   @:overload(function():UIScreenEdgePanGestureRecognizer {})
   @:native("autorelease") override public function autorelease():UIGestureRecognizer;
-  @:native("setEdges") public function setEdges(edges:UIRectEdge):Dynamic /*Void*/;
+  @:native("edges") public function edges():UIRectEdge;
+  @:native("setEdges") public function setEdges(edges:UIRectEdge):Void;
 }

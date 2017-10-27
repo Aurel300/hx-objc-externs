@@ -10,14 +10,15 @@ import haxe.Int64;
 extern class UITableViewRowAction
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("rowActionWithStyle:title:handler") public static function rowActionWithStyle_title_handler(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic /*Dynamic*/):UITableViewRowAction;
-  @:native("style") public function style():UITableViewRowActionStyle;
-  @:native("backgroundEffect") public function backgroundEffect():UIVisualEffect;
-  @:native("setBackgroundColor") public function setBackgroundColor(backgroundColor:UIColor):Dynamic /*Void*/;
-  @:native("setTitle") public function setTitle(title:NSString):Dynamic /*Void*/;
-  @:native("title") public function title():NSString;
   @:native("alloc") public static function alloc():UITableViewRowAction;
-  @:native("backgroundColor") public function backgroundColor():UIColor;
-  @:native("setBackgroundEffect") public function setBackgroundEffect(backgroundEffect:UIVisualEffect):Dynamic /*Void*/;
   @:native("autorelease") public function autorelease():UITableViewRowAction;
+  @:native("backgroundColor") public function backgroundColor():UIColor;
+  @:native("backgroundEffect") public function backgroundEffect():UIVisualEffect;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("rowActionWithStyle:title:handler") public static function rowActionWithStyle_title_handler(style:UITableViewRowActionStyle, title:NSString, handler:Dynamic):UITableViewRowAction;
+  @:native("setBackgroundColor") public function setBackgroundColor(backgroundColor:UIColor):Void;
+  @:native("setBackgroundEffect") public function setBackgroundEffect(backgroundEffect:UIVisualEffect):Void;
+  @:native("setTitle") public function setTitle(title:NSString):Void;
+  @:native("style") public function style():UITableViewRowActionStyle;
+  @:native("title") public function title():NSString;
 }

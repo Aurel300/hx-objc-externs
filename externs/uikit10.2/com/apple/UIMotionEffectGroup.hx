@@ -10,9 +10,9 @@ import haxe.Int64;
 extern class UIMotionEffectGroup
 extends UIMotionEffect
 {
-  @:native("motionEffects") public function motionEffects():Dynamic /*Dynamic*/;
-  @:native("setMotionEffects") public function setMotionEffects(motionEffects:Dynamic /*Dynamic*/):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIMotionEffectGroup;
   @:overload(function():UIMotionEffectGroup {})
   @:native("autorelease") override public function autorelease():UIMotionEffect;
+  @:native("motionEffects") public function motionEffects():Dynamic;
+  @:native("setMotionEffects") public function setMotionEffects(motionEffects:Dynamic):Void;
 }

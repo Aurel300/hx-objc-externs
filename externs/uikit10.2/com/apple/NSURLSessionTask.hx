@@ -10,23 +10,24 @@ import haxe.Int64;
 extern class NSURLSessionTask
 implements cpp.objc.Protocol<NSCopying>
 {
-  @:native("resume") public function resume():Dynamic /*Void*/;
-  @:native("response") public function response():NSURLResponse;
-  @:native("countOfBytesReceived") public function countOfBytesReceived():Dynamic /*Int64*/;
-  @:native("error") public function error():NSError;
-  @:native("suspend") public function suspend():Dynamic /*Void*/;
-  @:native("countOfBytesExpectedToSend") public function countOfBytesExpectedToSend():Dynamic /*Int64*/;
-  @:native("setTaskDescription") public function setTaskDescription(taskDescription:NSString):Dynamic /*Void*/;
-  @:native("state") public function state():NSURLSessionTaskState;
-  @:native("currentRequest") public function currentRequest():NSURLRequest;
-  @:native("countOfBytesSent") public function countOfBytesSent():Dynamic /*Int64*/;
-  @:native("countOfBytesExpectedToReceive") public function countOfBytesExpectedToReceive():Dynamic /*Int64*/;
-  @:native("originalRequest") public function originalRequest():NSURLRequest;
-  @:native("taskDescription") public function taskDescription():NSString;
-  @:native("cancel") public function cancel():Dynamic /*Void*/;
-  @:native("taskIdentifier") public function taskIdentifier():Int;
-  @:native("setPriority") public function setPriority(priority:Dynamic /*Float*/):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():NSURLSessionTask;
   @:native("autorelease") public function autorelease():NSURLSessionTask;
-  @:native("priority") public function priority():Dynamic /*Float*/;
+  @:native("cancel") public function cancel():Void;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("countOfBytesExpectedToReceive") public function countOfBytesExpectedToReceive():Int64;
+  @:native("countOfBytesExpectedToSend") public function countOfBytesExpectedToSend():Int64;
+  @:native("countOfBytesReceived") public function countOfBytesReceived():Int64;
+  @:native("countOfBytesSent") public function countOfBytesSent():Int64;
+  @:native("currentRequest") public function currentRequest():NSURLRequest;
+  @:native("error") public function error():NSError;
+  @:native("originalRequest") public function originalRequest():NSURLRequest;
+  @:native("priority") public function priority():Float;
+  @:native("response") public function response():NSURLResponse;
+  @:native("resume") public function resume():Void;
+  @:native("setPriority") public function setPriority(priority:Float):Void;
+  @:native("setTaskDescription") public function setTaskDescription(taskDescription:NSString):Void;
+  @:native("state") public function state():NSURLSessionTaskState;
+  @:native("suspend") public function suspend():Void;
+  @:native("taskDescription") public function taskDescription():NSString;
+  @:native("taskIdentifier") public function taskIdentifier():Int;
 }

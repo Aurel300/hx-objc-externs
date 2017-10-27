@@ -11,7 +11,7 @@ extern class NSURLSessionDownloadTask
 extends NSURLSessionTask
 {
   @:native("alloc") public static function alloc():NSURLSessionDownloadTask;
-  @:native("cancelByProducingResumeData") public function cancelByProducingResumeData(completionHandler:Dynamic /*Dynamic*/):Dynamic /*Void*/;
   @:overload(function():NSURLSessionDownloadTask {})
   @:native("autorelease") override public function autorelease():NSURLSessionTask;
+  @:native("cancelByProducingResumeData") public function cancelByProducingResumeData(completionHandler:Dynamic):Void;
 }

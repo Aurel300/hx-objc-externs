@@ -10,9 +10,9 @@ import haxe.Int64;
 extern class UICollectionViewFocusUpdateContext
 extends UIFocusUpdateContext
 {
-  @:native("nextFocusedIndexPath") public function nextFocusedIndexPath():NSIndexPath;
-  @:native("previouslyFocusedIndexPath") public function previouslyFocusedIndexPath():NSIndexPath;
   @:native("alloc") public static function alloc():UICollectionViewFocusUpdateContext;
   @:overload(function():UICollectionViewFocusUpdateContext {})
   @:native("autorelease") override public function autorelease():UIFocusUpdateContext;
+  @:native("nextFocusedIndexPath") public function nextFocusedIndexPath():NSIndexPath;
+  @:native("previouslyFocusedIndexPath") public function previouslyFocusedIndexPath():NSIndexPath;
 }

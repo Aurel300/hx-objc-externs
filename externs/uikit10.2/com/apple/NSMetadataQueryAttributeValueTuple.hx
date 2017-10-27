@@ -9,9 +9,9 @@ import haxe.Int64;
 @:include("UIKit/UIKit.h")
 extern class NSMetadataQueryAttributeValueTuple
 {
-  @:native("count") public function count():Int;
-  @:native("attribute") public function attribute():NSString;
   @:native("alloc") public static function alloc():NSMetadataQueryAttributeValueTuple;
+  @:native("attribute") public function attribute():NSString;
   @:native("autorelease") public function autorelease():NSMetadataQueryAttributeValueTuple;
-  @:native("value") public function value():Dynamic /*Dynamic*/;
+  @:native("count") public function count():Int;
+  @:native("value") public function value():Dynamic;
 }

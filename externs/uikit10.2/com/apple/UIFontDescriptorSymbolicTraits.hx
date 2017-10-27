@@ -7,7 +7,7 @@ import haxe.Int64;
 @:native("UIFontDescriptorSymbolicTraits")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract UIFontDescriptorSymbolicTraits(Dynamic /*UInt*/) from Dynamic /*UInt*/ to Dynamic /*UInt*/
+extern abstract UIFontDescriptorSymbolicTraits(UInt) from UInt to UInt
 {
   @:native("UIFontDescriptorTraitItalic") var UIFontDescriptorTraitItalic;
   @:native("UIFontDescriptorTraitBold") var UIFontDescriptorTraitBold;

@@ -7,6 +7,6 @@ import haxe.Int64;
 @:native("CGLineJoin")
 @:include("UIKit/UIKit.h")
 @:enum
-extern abstract CGLineJoin(Dynamic /*Int*/) from Dynamic /*Int*/ to Dynamic /*Int*/
+extern abstract CGLineJoin(Int) from Int to Int
 {
 }

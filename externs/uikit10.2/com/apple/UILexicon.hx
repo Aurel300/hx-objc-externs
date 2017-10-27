@@ -12,5 +12,6 @@ implements cpp.objc.Protocol<NSCopying>
 {
   @:native("alloc") public static function alloc():UILexicon;
   @:native("autorelease") public function autorelease():UILexicon;
-  @:native("entries") public function entries():Dynamic /*Dynamic*/;
+  /* Implicit from NSCopying */ @:native("copyWithZone") public function copyWithZone(zone:Dynamic /*_NSZone*/):Dynamic;
+  @:native("entries") public function entries():Dynamic;
 }

@@ -10,11 +10,12 @@ import haxe.Int64;
 extern class UIImageAsset
 implements cpp.objc.Protocol<NSSecureCoding>
 {
-  @:native("imageWithTraitCollection") public function imageWithTraitCollection(traitCollection:UITraitCollection):UIImage;
-  @:native("unregisterImageWithTraitCollection") public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Dynamic /*Void*/;
-  @:native("registerImage:withTraitCollection") public function registerImage_withTraitCollection(image:UIImage, traitCollection:UITraitCollection):Dynamic /*Void*/;
   @:native("alloc") public static function alloc():UIImageAsset;
   @:native("autorelease") public function autorelease():UIImageAsset;
+  /* Implicit from NSCoding */ @:native("encodeWithCoder") public function encodeWithCoder(aCoder:NSCoder):Void;
+  @:native("imageWithTraitCollection") public function imageWithTraitCollection(traitCollection:UITraitCollection):UIImage;
   @:native("init") public function init():UIImageAsset;
   @:native("initWithCoder") public function initWithCoder(aDecoder:NSCoder):UIImageAsset;
+  @:native("registerImage:withTraitCollection") public function registerImage_withTraitCollection(image:UIImage, traitCollection:UITraitCollection):Void;
+  @:native("unregisterImageWithTraitCollection") public function unregisterImageWithTraitCollection(traitCollection:UITraitCollection):Void;
 }
