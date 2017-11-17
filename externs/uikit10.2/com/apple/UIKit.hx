@@ -1428,8 +1428,8 @@ extern class UIKit
   @:native("CGImageSourceGetType") public static function CGImageSourceGetType(isrc:CGImageSource):Dynamic;
   @:native("CGImageSourceGetTypeID") public static function CGImageSourceGetTypeID():Int;
   @:native("CGImageSourceRemoveCacheAtIndex") public static function CGImageSourceRemoveCacheAtIndex(isrc:CGImageSource, index:Int):Void;
-  @:native("CGImageSourceUpdateData") public static function CGImageSourceUpdateData(isrc:CGImageSource, data:Dynamic, final:Bool):Void;
-  @:native("CGImageSourceUpdateDataProvider") public static function CGImageSourceUpdateDataProvider(isrc:CGImageSource, provider:CGDataProvider, final:Bool):Void;
+  @:native("CGImageSourceUpdateData") public static function CGImageSourceUpdateData(isrc:CGImageSource, data:Dynamic, finl:Bool):Void;
+  @:native("CGImageSourceUpdateDataProvider") public static function CGImageSourceUpdateDataProvider(isrc:CGImageSource, provider:CGDataProvider, finl:Bool):Void;
   @:native("CGLayerCreateWithContext") public static function CGLayerCreateWithContext(context:CGContext, size:CGSize, auxiliaryInfo:Dynamic):CGLayer;
   @:native("CGLayerGetContext") public static function CGLayerGetContext(layer:CGLayer):CGContext;
   @:native("CGLayerGetSize") public static function CGLayerGetSize(layer:CGLayer):CGSize;

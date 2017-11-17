@@ -223,6 +223,7 @@ class Main {
         return (switch (name) {
             case "function": "func";
             case "class": "cls";
+            case "final": "finl";
             case _: name;
           });
       }
